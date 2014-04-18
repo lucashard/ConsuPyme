@@ -24,15 +24,6 @@ namespace ConsupymeMedicina.Controllers
         //
         // GET: /Despacho/Details/5
 
-        public ActionResult Details(int id = 0)
-        {
-            Despacho despacho = db.Despacho.Find(id);
-            if (despacho == null)
-            {
-                return HttpNotFound();
-            }
-            return View(despacho);
-        }
 
         //
         // GET: /Despacho/Create
