@@ -1,0 +1,57 @@
+﻿@model Modelo.Factura_Total
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Factura_Total</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.N_Orden)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.N_Orden)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Creacion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Creacion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Numero_Factura)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Numero_Factura)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Envalaje)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Envalaje)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Flete)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Flete)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

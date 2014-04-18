@@ -1,0 +1,78 @@
+﻿@model Modelo.Factura_Total
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Factura_Total</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.N_Orden)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.N_Orden)
+            @Html.ValidationMessageFor(model => model.N_Orden)
+        </div>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Nombre)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nombre)
+            @Html.ValidationMessageFor(model => model.Nombre)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Creacion)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Creacion)
+            @Html.ValidationMessageFor(model => model.Creacion)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Numero_Factura)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Numero_Factura)
+            @Html.ValidationMessageFor(model => model.Numero_Factura)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Envalaje)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Envalaje)
+            @Html.ValidationMessageFor(model => model.Envalaje)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Flete)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Flete)
+            @Html.ValidationMessageFor(model => model.Flete)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

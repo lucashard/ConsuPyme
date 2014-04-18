@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Modelo.Despacho>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Costo_despacho_producto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Dc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Oficializacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fob_Total)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Flete_Total)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Seguro_Total)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cotizacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Codigo_Afip)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Arancel_Sim)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Servicio_Guarda)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Costo_despacho_producto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Dc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Oficializacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fob_Total)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Flete_Total)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Seguro_Total)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cotizacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Codigo_Afip)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Arancel_Sim)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Servicio_Guarda)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

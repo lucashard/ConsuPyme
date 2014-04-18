@@ -1,0 +1,61 @@
+﻿@model Modelo.Factura_Total
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Factura_Total</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.N_Orden)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.N_Orden)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Nombre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nombre)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Creacion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Creacion)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Numero_Factura)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Numero_Factura)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Envalaje)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Envalaje)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Flete)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Flete)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
