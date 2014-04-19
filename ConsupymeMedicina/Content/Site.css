@@ -538,7 +538,7 @@ th {
     font-size: 1.2em;
     text-align: left;
     border: none 0px;
-    padding-left: 0;
+    padding-left: 10px;
 }
 
     th a {
@@ -580,6 +580,7 @@ th {
 td {
     padding: 0.25em 2em 0.25em 0em;
     border: 0 none;
+    padding-left:10px;
 }
 
 tr.pager td {
@@ -756,7 +757,7 @@ tr.pager td {
 }
 .webgrid
 {
- width: 100%;
+ width: 50%;
  border: 0px;
  border-collapse: collapse;
  white-space:nowrap;
@@ -771,9 +772,11 @@ tr.pager td {
 color: #000;
 }
 
+ td:first-child { padding-left:0px; }
+
 .webgrid-header
 {
-padding: 6px 5px;
+padding: 6px 15px;
 text-align: center;
 background-color: #e8eef4;
 border-bottom: 2px solid #3966A2;

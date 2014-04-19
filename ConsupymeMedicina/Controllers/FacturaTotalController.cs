@@ -19,7 +19,6 @@ namespace ConsupymeMedicina.Controllers
         public ActionResult Index()
         {
             return View(db.Factura_Total.ToList());
-            ;
         }
 
         //

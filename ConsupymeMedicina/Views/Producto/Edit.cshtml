@@ -4,7 +4,7 @@
     ViewBag.Title = "Edit";
 }
 
-<h2>Edit</h2>
+<h2>Editar Producto</h2>
 
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
@@ -32,7 +32,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Posicion_ArancelariaId, "Posicion_Arancelaria")
+            @Html.Label("Posicion Arancelaria")
         </div>
         <div class="editor-field">
             @Html.DropDownList("Posicion_ArancelariaId", String.Empty)
@@ -40,13 +40,13 @@
         </div>
 
         <p>
-            <input type="submit" value="Save" />
+            <input type="submit" value="Guardar" />
         </p>
     </fieldset>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Volver", "Index")
 </div>
 
 @section Scripts {

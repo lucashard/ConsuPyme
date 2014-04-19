@@ -14,7 +14,7 @@
         <legend>Factura_Total</legend>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.N_Orden)
+            @Html.Label("Numero de Orden")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.N_Orden)
@@ -40,7 +40,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Numero_Factura)
+            @Html.Label("Numero Factura")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Numero_Factura)
@@ -70,7 +70,7 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Volver", "Index")
 </div>
 
 @section Scripts {

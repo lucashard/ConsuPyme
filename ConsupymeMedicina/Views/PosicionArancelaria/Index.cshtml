@@ -4,24 +4,24 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Posicion Arancelaria</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear", "Create")
 </p>
 <table>
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Numero_Posicion)
+            @Html.DisplayName("Numero Posicion")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Porcentaje_Iva)
+            @Html.DisplayName("Porcentaje Iva")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Porcentaje_Taza_Estadistica)
+            @Html.DisplayName("Porcentaje Taza Estadistica")
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Porcentaje_Importacion)
+            @Html.DisplayName("Porcentaje Importacion")
         </th>
         <th></th>
     </tr>
@@ -41,9 +41,9 @@
             @Html.DisplayFor(modelItem => item.Porcentaje_Importacion)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
+         @*   @Html.ActionLink("Details", "Details", new { id=item.Id }) |*@
+            @Html.ActionLink("Borrar", "Delete", new { id=item.Id })
         </td>
     </tr>
 }

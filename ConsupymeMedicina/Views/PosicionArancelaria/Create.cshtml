@@ -4,17 +4,17 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+<h2>Crear Posicion Arancelaria</h2>
 
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
     <fieldset>
-        <legend>Posicion_Arancelaria</legend>
+        <legend>Posicion Arancelaria</legend>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Numero_Posicion)
+            @Html.Label("Numero Posicion")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Numero_Posicion)
@@ -22,7 +22,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Porcentaje_Iva)
+            @Html.Label("Porcentaje Iva")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Porcentaje_Iva)
@@ -30,7 +30,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Porcentaje_Taza_Estadistica)
+            @Html.Label("Porcentaje Taza Estadistica")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Porcentaje_Taza_Estadistica)
@@ -38,7 +38,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Porcentaje_Importacion)
+            @Html.Label("Porcentaje Importacion")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Porcentaje_Importacion)
@@ -46,13 +46,13 @@
         </div>
 
         <p>
-            <input type="submit" value="Create" />
+            <input type="submit" value="Crear" />
         </p>
     </fieldset>
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Volver", "Index")
 </div>
 
 @section Scripts {

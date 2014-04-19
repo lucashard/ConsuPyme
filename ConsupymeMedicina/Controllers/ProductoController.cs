@@ -19,8 +19,7 @@ namespace ConsupymeMedicina.Controllers
         public ActionResult Index()
         {
             var producto = db.Producto.Include(p => p.Posicion_Arancelaria);
-            var pi = producto.ToList();
-            return View(pi);
+            return View(producto.ToList());
         }
 
         //

@@ -4,18 +4,27 @@
     ViewBag.Title = "Create";
     var grid = new WebGrid(ViewBag.Producto, rowsPerPage: 1);
 }
-
-<h2>Create</h2>
+<head>
+    <script type="text/javascript" src="/Scripts/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            debugger;
+            $("#IDHidden").hide();
+        });
+    </script>
+</head>
+<body>
+<h2>Crear Factura</h2>
 
 @using (Html.BeginForm()) {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
     <fieldset>
-        <legend>Factura_Total</legend>
+        <legend>Factura</legend>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.N_Orden)
+            @Html.Label("Numero de Orden")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.N_Orden)
@@ -39,7 +48,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.Numero_Factura)
+            @Html.Label("Numero Factura")
         </div>
         <div class="editor-field">
             @Html.EditorFor(model => model.Numero_Factura)
@@ -69,13 +78,13 @@
         rowStyle: "webgrid-row-style",
         columns:
             grid.Columns(
-                grid.Column(null, null, @<input type="hidden" name="IDHidden"  id="IDHidden" value="@item.Id"/>),
+                grid.Column(null, null, @<input type="hidden" name="IDHidden"  id="IDHidden" value="@item.Id" style="visibility: hidden;"/>),
                 grid.Column("Codigo", "Codigo", canSort: false),
                 grid.Column("Descripcion", "Descripcion", canSort: false),
-                grid.Column("Num_Lote", "Num_Lote", canSort: false, format: @<input type="text" name="nlote" id="nlote" value="" />),
-                grid.Column("Precio_Unitario", "Precio_Unitario", canSort: false, format: @<input type="text" id="precio"  name="precio" />),
-                grid.Column("Cantidad", "Cantidad", canSort: false, format: @<input type="text" id="cantidad" name="cantidad" />),
-                grid.Column("Seleccionar", canSort: false, format: @<input type="checkbox" id="visible" name="visible" value="@item.Id" />)), htmlAttributes: new {id = "Id"})
+                grid.Column("Num_Lote", "Numero de lote", canSort: false, format: @<input type="text" name="nlote" id="nlote" value="" style="width:65px;" />),
+                grid.Column("Precio_Unitario", "Precio Unitario", canSort: false, format: @<input type="text" id="precio"  name="precio" style="width:65px;" />),
+                grid.Column("Cantidad", "Cantidad", canSort: false, format: @<input type="text" id="cantidad" name="cantidad" style="width:65px;" />),
+                grid.Column("Seleccionar", canSort: false, format: @<input type="checkbox" id="visible" name="visible" value="@item.Id" style="width:65px;" />)), htmlAttributes: new {id = "Id"})
  
 </div>
         <p>
@@ -87,7 +96,7 @@
 <div>
     @Html.ActionLink("Volver", "Index")
 </div>
-
+    </body>
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
