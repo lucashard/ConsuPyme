@@ -6,12 +6,21 @@
 }
 <head>
     <script type="text/javascript" src="/Scripts/jquery-1.8.2.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            debugger;
-            $("#IDHidden").hide();
-        });
+    
+        <script type="text/javascript">
+            $(function () {
+                $(':checkbox').change(function () {
+                    $.ajax({
+                        url: '@Url.Action("Select")',
+                        type: 'POST',
+                        data: { isChecked: $(this).is(':checked'), id: $(this).val() },
+                        success: function (result) {
+                        }
+                    });
+                });
+            });
     </script>
+    
 </head>
 <body>
 <h2>Crear Factura</h2>
@@ -84,7 +93,7 @@
                 grid.Column("Num_Lote", "Numero de lote", canSort: false, format: @<input type="text" name="nlote" id="nlote" value="" style="width:65px;" />),
                 grid.Column("Precio_Unitario", "Precio Unitario", canSort: false, format: @<input type="text" id="precio"  name="precio" style="width:65px;" />),
                 grid.Column("Cantidad", "Cantidad", canSort: false, format: @<input type="text" id="cantidad" name="cantidad" style="width:65px;" />),
-                grid.Column("Seleccionar", canSort: false, format: @<input type="checkbox" id="visible" name="visible" value="@item.Id" style="width:65px;" />)), htmlAttributes: new {id = "Id"})
+                grid.Column("Seleccionar", canSort: false, format: @<input type="checkbox" id="visible" name="visible" value="@item.Id.ToString()" style="width:65px;"  @Html.Raw(((List<String>)ViewData["SelectList"]).Contains(@item.Id.ToString()) ? "checked" : "") />)))
  
 </div>
         <p>

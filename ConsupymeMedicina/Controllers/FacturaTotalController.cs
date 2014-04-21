@@ -59,6 +59,24 @@ namespace ConsupymeMedicina.Controllers
 
             return View(factura_total);
         }
+        private static List<string> list { get; set; }
+        
+        [HttpPost]
+        public ActionResult Select(bool isChecked, String id)
+        {
+            var selectList = (List<String>)HttpContext.Session["SelectList"] ?? list;
+            if (isChecked && !selectList.Contains(id))
+            {
+                selectList.Add(id);
+            }
+            else if (!isChecked && selectList.Contains(id))
+            {
+                selectList.RemoveAll(s => s == id);
+            }
+            HttpContext.Session["SelectList"] = selectList;
+
+            return Content("OK");
+        }
 
         //
         // GET: /FacturaTotal/Edit/5
