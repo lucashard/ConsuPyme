@@ -669,6 +669,53 @@
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->
-    <Diagrams></Diagrams>
+    <Diagrams>
+      <Diagram Name="Model1">
+        <EntityTypeShape EntityType="ConsuPymeDesarrolloModel.Acarreo" Width="1.5" PointX="3" PointY="4.625" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConsuPymeDesarrolloModel.Deposito" Width="1.5" PointX="3" PointY="7.5" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConsuPymeDesarrolloModel.Despachante" Width="1.5" PointX="3" PointY="10.5" Height="3.1340950520833317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConsuPymeDesarrolloModel.Despacho" Width="1.5" PointX="0.75" PointY="7.125" Height="3.9033007812499987" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConsuPymeDesarrolloModel.Factura_Despacho" Width="1.5" PointX="6" PointY="8.125" Height="1.9802864583333317" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConsuPymeDesarrolloModel.Factura_Total" Width="1.5" PointX="3.75" PointY="0.75" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConsuPymeDesarrolloModel.Factura_Total_Producto" Width="1.5" PointX="10.25" PointY="1.625" Height="2.5571907552083313" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConsuPymeDesarrolloModel.Posicion_Arancelaria" Width="1.5" PointX="5.75" PointY="3" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConsuPymeDesarrolloModel.Producto" Width="1.5" PointX="8" PointY="3" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="ConsuPymeDesarrolloModel.Usuarios" Width="1.5" PointX="8.75" PointY="6.625" Height="1.5956835937499996" IsExpanded="true" />
+        <AssociationConnector Association="ConsuPymeDesarrolloModel.FK_AcarreoDespacho" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="7.125" />
+          <ConnectorPoint PointX="1.5" PointY="5.7112939453125" />
+          <ConnectorPoint PointX="3" PointY="5.7112939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="ConsuPymeDesarrolloModel.FK_DepositoDespacho" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="8.5862939453125" />
+          <ConnectorPoint PointX="3" PointY="8.5862939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="ConsuPymeDesarrolloModel.FK_DespachoDespachante" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="10.764150390625" />
+          <ConnectorPoint PointX="3" PointY="10.764150390625" />
+        </AssociationConnector>
+        <AssociationConnector Association="ConsuPymeDesarrolloModel.FK_Factura_DespachoDespacho" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="9.9201871744791656" />
+          <ConnectorPoint PointX="6" PointY="9.9201871744791656" />
+        </AssociationConnector>
+        <AssociationConnector Association="ConsuPymeDesarrolloModel.FK_Factura_TotalFactura_Despacho" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.90625" PointY="3.4994921874999996" />
+          <ConnectorPoint PointX="4.90625" PointY="9.7963850325520809" />
+          <ConnectorPoint PointX="6" PointY="9.7963850325520809" />
+        </AssociationConnector>
+        <AssociationConnector Association="ConsuPymeDesarrolloModel.FK_Factura_TotalFactura_Total_Producto" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.25" PointY="2.28125" />
+          <ConnectorPoint PointX="10.25" PointY="2.28125" />
+        </AssociationConnector>
+        <AssociationConnector Association="ConsuPymeDesarrolloModel.FK_Factura_Total_ProductoProducto" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.5" PointY="3.5910953776041659" />
+          <ConnectorPoint PointX="10.25" PointY="3.5910953776041659" />
+        </AssociationConnector>
+        <AssociationConnector Association="ConsuPymeDesarrolloModel.FK_Posicion_ArancelariaProducto" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.25" PointY="4.0862939453125" />
+          <ConnectorPoint PointX="8" PointY="4.0862939453125" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
   </Designer>
 </edmx:Edmx>
