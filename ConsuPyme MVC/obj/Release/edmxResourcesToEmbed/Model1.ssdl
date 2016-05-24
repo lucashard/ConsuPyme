@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ConsuPymeModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="ConsuPymeModelStoreContainer">
+    <EntitySet Name="Acarreo" EntityType="ConsuPymeModel.Store.Acarreo" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Deposito" EntityType="ConsuPymeModel.Store.Deposito" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Despachante" EntityType="ConsuPymeModel.Store.Despachante" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Despacho" EntityType="ConsuPymeModel.Store.Despacho" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Factura" EntityType="ConsuPymeModel.Store.Factura" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Factura_Despacho" EntityType="ConsuPymeModel.Store.Factura_Despacho" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Factura_Total" EntityType="ConsuPymeModel.Store.Factura_Total" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Factura_Total_Producto" EntityType="ConsuPymeModel.Store.Factura_Total_Producto" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Posicion_Arancelaria" EntityType="ConsuPymeModel.Store.Posicion_Arancelaria" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Producto" EntityType="ConsuPymeModel.Store.Producto" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Tipo_Cambio" EntityType="ConsuPymeModel.Store.Tipo_Cambio" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Usuarios" EntityType="ConsuPymeModel.Store.Usuarios" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_AcarreoDespacho" Association="ConsuPymeModel.Store.FK_AcarreoDespacho">
+      <End Role="Despacho" EntitySet="Despacho" />
+      <End Role="Acarreo" EntitySet="Acarreo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DepositoDespacho" Association="ConsuPymeModel.Store.FK_DepositoDespacho">
+      <End Role="Despacho" EntitySet="Despacho" />
+      <End Role="Deposito" EntitySet="Deposito" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DespachoDespachante" Association="ConsuPymeModel.Store.FK_DespachoDespachante">
+      <End Role="Despacho" EntitySet="Despacho" />
+      <End Role="Despachante" EntitySet="Despachante" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DespachoTipo_Cambio" Association="ConsuPymeModel.Store.FK_DespachoTipo_Cambio">
+      <End Role="Tipo_Cambio" EntitySet="Tipo_Cambio" />
+      <End Role="Despacho" EntitySet="Despacho" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Factura_DespachoDespacho" Association="ConsuPymeModel.Store.FK_Factura_DespachoDespacho">
+      <End Role="Despacho" EntitySet="Despacho" />
+      <End Role="Factura_Despacho" EntitySet="Factura_Despacho" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Factura_Total_ProductoProducto" Association="ConsuPymeModel.Store.FK_Factura_Total_ProductoProducto">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="Factura_Total_Producto" EntitySet="Factura_Total_Producto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Factura_TotalFactura_Total_Producto" Association="ConsuPymeModel.Store.FK_Factura_TotalFactura_Total_Producto">
+      <End Role="Factura_Total" EntitySet="Factura_Total" />
+      <End Role="Factura_Total_Producto" EntitySet="Factura_Total_Producto" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FacturaFactura_Despacho" Association="ConsuPymeModel.Store.FK_FacturaFactura_Despacho">
+      <End Role="Factura" EntitySet="Factura" />
+      <End Role="Factura_Despacho" EntitySet="Factura_Despacho" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FacturaFactura_Total" Association="ConsuPymeModel.Store.FK_FacturaFactura_Total">
+      <End Role="Factura_Total" EntitySet="Factura_Total" />
+      <End Role="Factura" EntitySet="Factura" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Posicion_ArancelariaProducto" Association="ConsuPymeModel.Store.FK_Posicion_ArancelariaProducto">
+      <End Role="Posicion_Arancelaria" EntitySet="Posicion_Arancelaria" />
+      <End Role="Producto" EntitySet="Producto" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Acarreo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Importe" Type="decimal" Nullable="false" />
+    <Property Name="Numero_Factura" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DespachoId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Deposito">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Importe" Type="decimal" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Numero_Factura" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DespachoId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Despachante">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Numero_Factura" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Ley" Type="decimal" Nullable="false" />
+    <Property Name="Djai" Type="decimal" Nullable="false" />
+    <Property Name="AD_Sim" Type="decimal" Nullable="false" />
+    <Property Name="Gastos_Despacho" Type="decimal" Nullable="false" />
+    <Property Name="Desconsolidado" Type="decimal" Nullable="false" />
+    <Property Name="Servicios" Type="decimal" Nullable="false" />
+    <Property Name="DespachoId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Despacho">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Dc" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Oficializacion" Type="datetime" Nullable="false" />
+    <Property Name="Fob_Total" Type="decimal" Nullable="false" />
+    <Property Name="Flete_Total" Type="decimal" Nullable="false" />
+    <Property Name="Seguro_Total" Type="decimal" Nullable="false" />
+    <Property Name="Cotizacion" Type="decimal" Nullable="false" />
+    <Property Name="Codigo_Afip" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Arancel_Sim" Type="decimal" Nullable="false" />
+    <Property Name="Servicio_Guarda" Type="decimal" Nullable="false" />
+    <Property Name="Tipo_CambioId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Factura">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Flete" Type="decimal" />
+    <Property Name="Envalaje" Type="decimal" />
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Factura_Total_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Factura_Despacho">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="DespachoId" Type="int" Nullable="false" />
+    <Property Name="FacturaId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Factura_Total">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Vencimiento_Factura" Type="datetime" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Creacion" Type="datetime" Nullable="false" />
+    <Property Name="Numero_Factura" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Factura_Total_Producto">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Num_Lote" Type="nvarchar(max)" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+    <Property Name="Precio_Unitario" Type="decimal" Nullable="false" />
+    <Property Name="ProductoId" Type="int" Nullable="false" />
+    <Property Name="Factura_TotalId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Posicion_Arancelaria">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Numero_Posicion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Porcentaje_Iva" Type="decimal" Nullable="false" />
+    <Property Name="Porcentaje_Taza_Estadistica" Type="decimal" Nullable="false" />
+    <Property Name="Porcentaje_Importacion" Type="decimal" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Producto">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Codigo" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Posicion_ArancelariaId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Tipo_Cambio">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Cambio" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuarios">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Clave" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AcarreoDespacho">
+    <End Role="Despacho" Type="ConsuPymeModel.Store.Despacho" Multiplicity="1" />
+    <End Role="Acarreo" Type="ConsuPymeModel.Store.Acarreo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Despacho">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Acarreo">
+        <PropertyRef Name="DespachoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DepositoDespacho">
+    <End Role="Despacho" Type="ConsuPymeModel.Store.Despacho" Multiplicity="1" />
+    <End Role="Deposito" Type="ConsuPymeModel.Store.Deposito" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Despacho">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Deposito">
+        <PropertyRef Name="DespachoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DespachoDespachante">
+    <End Role="Despacho" Type="ConsuPymeModel.Store.Despacho" Multiplicity="1" />
+    <End Role="Despachante" Type="ConsuPymeModel.Store.Despachante" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Despacho">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Despachante">
+        <PropertyRef Name="DespachoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DespachoTipo_Cambio">
+    <End Role="Tipo_Cambio" Type="ConsuPymeModel.Store.Tipo_Cambio" Multiplicity="1" />
+    <End Role="Despacho" Type="ConsuPymeModel.Store.Despacho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tipo_Cambio">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Despacho">
+        <PropertyRef Name="Tipo_CambioId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Factura_DespachoDespacho">
+    <End Role="Despacho" Type="ConsuPymeModel.Store.Despacho" Multiplicity="1" />
+    <End Role="Factura_Despacho" Type="ConsuPymeModel.Store.Factura_Despacho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Despacho">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Factura_Despacho">
+        <PropertyRef Name="DespachoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Factura_Total_ProductoProducto">
+    <End Role="Producto" Type="ConsuPymeModel.Store.Producto" Multiplicity="1" />
+    <End Role="Factura_Total_Producto" Type="ConsuPymeModel.Store.Factura_Total_Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Factura_Total_Producto">
+        <PropertyRef Name="ProductoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Factura_TotalFactura_Total_Producto">
+    <End Role="Factura_Total" Type="ConsuPymeModel.Store.Factura_Total" Multiplicity="1" />
+    <End Role="Factura_Total_Producto" Type="ConsuPymeModel.Store.Factura_Total_Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Factura_Total">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Factura_Total_Producto">
+        <PropertyRef Name="Factura_TotalId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FacturaFactura_Despacho">
+    <End Role="Factura" Type="ConsuPymeModel.Store.Factura" Multiplicity="1" />
+    <End Role="Factura_Despacho" Type="ConsuPymeModel.Store.Factura_Despacho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Factura">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Factura_Despacho">
+        <PropertyRef Name="FacturaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FacturaFactura_Total">
+    <End Role="Factura_Total" Type="ConsuPymeModel.Store.Factura_Total" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Factura" Type="ConsuPymeModel.Store.Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Factura_Total">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="Factura_Total_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Posicion_ArancelariaProducto">
+    <End Role="Posicion_Arancelaria" Type="ConsuPymeModel.Store.Posicion_Arancelaria" Multiplicity="1" />
+    <End Role="Producto" Type="ConsuPymeModel.Store.Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Posicion_Arancelaria">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Producto">
+        <PropertyRef Name="Posicion_ArancelariaId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="baja_despacho" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_despacho" Type="int" Mode="In" />
+  </Function>
+  <Function Name="baja_factura" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id_factura" Type="int" Mode="In" />
+  </Function>
+  <Function Name="cantidad_Producto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="fn_diagramobjects" ReturnType="int" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="listado_acarreo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="listado_deposito" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="listado_despachante" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dc" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="listado_factura_producto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="listado_Facturas" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="nombre" Type="varchar(max)" Mode="In" />
+  </Function>
+  <Function Name="precio_Producto" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="Ver_Despacho" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="ver_factura" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+</Schema>

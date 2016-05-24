@@ -1,0 +1,25 @@
+Creacion --> Fecha factura
+
+ELIMINAR NUMERO DE ORDEN
+PONER VENCIMIENTO FACTURA
+PONER VARIAS POCICIONES ARANCELARIAS VARIOS TEXTBOX(10 TEXTBOX), REMPPLAZAR Codigo_Afip POR POSICION_SIM
+
+BORRAR COSTO
+
+EN DESPACHO PONER OPCION DE TIPO DE CAMBIO: Y PONER OPCIONES COMO:
+DOLAR,EURO,DOLAR AUSTRALIANO.
+
+EN DESPACHANTE BORRAR DE LA TABLA LA COLUMNA CODIGO AFIP
+
+MOSTRAR SOLO EL DC
+
+
+EN EL FACTURA, DESPACHO TODO EN DOLARES
+
+ACARREO, DESPACHANTE Y DEPOSITO ES EN PESOS, PASAR A DOLARES EN EL REPORTE
+
+http://www.mssqltips.com/sqlservertip/1888/when-to-use-set-vs-select-when-assigning-values-to-variables-in-sql-server/
+
+ALTER proc [dbo].[listado_factura_producto]
+as
+select distinct p.Codigo,ftp.Factura_TotalId as 'id factura total',p.id as 'id producto',ftp.Precio_Unitario,ftp.Cantidad,ftp.Num_Lote,p.Descripcion from Producto p left join Factura_Total_Producto ftp on p.Id=ftp.ProductoId --where ftp. is not null

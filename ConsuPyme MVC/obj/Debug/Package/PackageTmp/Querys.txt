@@ -1,0 +1,26 @@
+﻿select DISTINCT ft.Nombre  from Despacho d inner join Factura_Despacho fd on d.Id=fd.DespachoId
+inner join Factura f on fd.FacturaId=f.Id inner join Factura_Total ft
+on f.Factura_Total_Id=ft.Id inner join Factura_Total_Producto ftp 
+on ft.Id=ftp.Factura_TotalId inner join Producto p
+on ftp.ProductoId=p.Id 
+
+
+--SP
+
+USE [ConsuPyme]
+GO
+/****** Object:  StoredProcedure [dbo].[baja_factura]    Script Date: 12/22/2014 01:41:08 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER proc [dbo].[baja_factura]
+(
+@id_factura int
+)
+as
+--delete Factura_Producto where FacturaId=@id_factura
+--DELETE Factura_Despacho WHERE FacturaId=@id_factura
+--delete ft FROM Factura_Total as ft inner join Factura as f on ft.Id=f.Factura_Total_Id where  f.Id=@id_factura
+delete ftp FROM Factura_Total as ft inner join Factura as f on ft.Id=f.Factura_Total_Id inner join Factura_Total_Producto ftp on ft.Id=ftp.Factura_TotalId  where  f.Id=@id_factura
+delete Factura where id=@id_factura

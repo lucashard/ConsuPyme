@@ -1,0 +1,93 @@
+<html>
+<head>
+<script type="text/javascript">
+window.location.replace("http://stackoverflow.com");
+</script>
+</head>
+<body>
+</body>
+</html>
+
+----------------------------
+  grid.Column("Acciones", format: @<text>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.Id })
+                    |
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.Id })
+                  </text>)
+				  
+-------------------------------
+PERSISTIR CHECKBOX
+        grid.Column("Seleccionar", format: @<input name="Id" type="checkbox" value="@item.Value.Id" @Html.Raw(((List<string>)ViewData["SelectList"]).Contains(((((System.Web.Helpers.WebGridRow)(@item))).Value).Id.ToString()) ? "checked" : "") />),
+		
+		  <div style="width: 50%;">
+        <table class="table-striped" id="tabla">
+            <tr>
+                <th>
+                    Codigo afip
+                </th>
+                <th>
+                    Dc
+                </th>
+                <th>
+                    Cotizacion
+                </th>
+                <th>
+                    Flete total
+                </th>
+                <th>
+                    Fob total
+                </th>
+                <th>
+                    Arancel sim
+                </th>
+                <th>
+                    Servicio guarda
+                </th>
+                <th>
+                    Servicio total
+                </th>
+                <th>
+                    Costo despacho productos
+                </th>
+
+                <th>Seleccionar</th>
+            </tr>
+
+            @foreach (var item in )
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Codigo_Afip)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Dc)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelitem => item.Cotizacion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelitem => item.Flete_Total)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelitem => item.Fob_Total)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelitem => item.Arancel_Sim)
+                    </td>
+                     <td>
+                        @Html.DisplayFor(modelitem => item.Servicio_Guarda)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelitem => item.Seguro_Total)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelitem => item.Costo_despacho_producto)
+                    </td>
+                    <td>
+                        @*@Html.CheckBoxFor(modelItem => item.Visible)*@
+                        <input type="checkbox" name="visible" value="@item.Id" />
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>

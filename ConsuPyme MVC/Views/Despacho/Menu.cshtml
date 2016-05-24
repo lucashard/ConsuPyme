@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Menu";
+}
+
+<head><link type="text/css" href="../../Content/menu.css" rel="stylesheet" />
+@*	<script type="text/javascript" src="../../Scripts/jquery-2.0.2.min.js"></script>*@
+<script type="text/javascript" src="../../Scripts/menu.js"></script>
+    </head>
+<body>
+    <div id="menu">
+        <ul class="menu">
+            <li><a href="#"><span>Despacho</span></a></li>
+            <li><a href='@Url.Action("Index","Producto")' target="iframe1"><span>Producto</span></a></li>
+            <li><a href='@Url.Action("Index","Posicion_Arancelaria")' target="iframe1"><span>Posicion  arancelaria</span></a></li>
+            <li><a href='@Url.Action("Index","Deposito")'  target="iframe1"><span>Deposito</span></a></li>
+            <li><a href='@Url.Action("Index","Acarreos")'  target="iframe1"><span>Acarreo</span></a></li>
+            @*<li><a href='@Url.Action("Prueba","Acarreos")'  target="iframe1"><span>Prueba</span></a></li>*@
+            <li class="last"><a href="#"><span>Contacts</span></a></li>
+        </ul>
+    </div>
+    <a href="http://apycom.com/"></a>
+    <iframe name="iframe1" width="100%" height="100%" frameborder="0" src='@Url.Action("Index","Acarreos")'></iframe>
+    </body>

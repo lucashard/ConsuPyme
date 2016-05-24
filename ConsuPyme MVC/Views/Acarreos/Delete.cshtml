@@ -1,0 +1,33 @@
+﻿@model ConsuPyme_MVC.Models.Acarreos
+
+@{
+    ViewBag.Title = "Borrar";
+}
+
+<h2>Delete</h2>
+
+<h3>¿Esta seguro que quiere borrar el acarreo?</h3>
+<fieldset>
+    <legend>Acarreos</legend>
+
+    <div class="display-label">Nombre</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nombre)
+    </div>
+
+    <div class="display-label">Numero_Factura</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Numero_Factura)
+    </div>
+
+    <div class="display-label">Importe</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Importe)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Borrar" /> |
+        @Html.ActionLink("Volver", "Index")
+    </p>
+}

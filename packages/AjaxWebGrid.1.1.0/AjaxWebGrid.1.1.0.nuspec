@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>AjaxWebGrid</id>
+    <version>1.1.0</version>
+    <title>AjaxWebGrid</title>
+    <authors>Sébastien Ollivier</authors>
+    <owners>Sébastien Ollivier</owners>
+    <projectUrl>http://sebastienollivier.fr/blog/asp-net-mvc/plugin-jquery-ajaxwebgrid-1-1-0</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>sor.ajaxWebGrid</description>
+    <releaseNotes />
+    <copyright />
+    <language />
+  </metadata>
+</package>

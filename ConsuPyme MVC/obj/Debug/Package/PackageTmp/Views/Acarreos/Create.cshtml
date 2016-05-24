@@ -1,0 +1,170 @@
+﻿@model ConsuPyme_MVC.Models.Acarreos
+
+@{
+    ViewBag.Title = "Crear";
+    
+}
+
+<h2>Crear Acarreo</h2>
+<head>
+   <link href="@Url.Content("~/Content/layout.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css"/>
+    
+    <script src="@Url.Content("~/Scripts/jquery-2.0.2.min.js")" type="text/javascript"> </script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"> </script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"> </script>
+    <script src="@Url.Content("~/Scripts/DatePicker/jquery-ui.min.js")" type="text/javascript"> </script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            
+                    $("#Fecha").datepicker({
+                        dateFormat: "dd-mm-yy",
+                        firstDay: 1,
+                        maxDate: new Date(),
+                        dayNamesMin: ["Do", "Lu", "Ma", "Mi", "Ju", "Vi", "Sa"],
+                        dayNamesShort: ["Dom", "Lun", "Mar", "Mie", "Jue", "Vie", "Sab"],
+                        monthNames:
+                        [
+                            "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio",
+                            "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+                        ],
+                        monthNamesShort:
+                        [
+                            "Ene", "Feb", "Mar", "Abr", "May", "Jun",
+                            "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"
+                        ]
+                    });
+            
+        $(function () {
+            $(':radio').change(function () {
+                debugger;
+                var id1 = $(this).val();
+                $.ajax({
+                    url: '@Url.Action("Select")',
+                    type: 'POST',
+                    data: { isChecked: $(this).is(':checked'), id: id1 },
+                    success: function (result) {
+                    }
+                });
+            });
+        });
+
+        $.validator.methods.range = function (value, element, param) {
+            var globalizedValue = value.replace(",", ".");
+            return this.optional(element) || (globalizedValue >= param[0] && globalizedValue <= param[1]);
+        }
+
+        $.validator.methods.number = function (value, element) {
+            return this.optional(element) || /^-?(?:\d+|\d{1,3}(?:[\s\.,]\d{3})+)(?:[\.,]\d+)?$/.test(value);
+        }
+    });
+    </script>
+
+    <script type="text/javascript">
+        function guardar() {
+            acarreo = {
+                Nombre:$("#Nombre").val(),
+                Numero_Factura:parseInt($("#Numero_Factura").val()),
+                Importe:$("#Importe").val()
+            };
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("Create", "Acarreos")",
+                data: JSON.stringify(acarreo),
+                success: function() {
+                    var link = "@Url.Action("Index")";
+                    window.location.href = link;
+                },
+                contentType: 'application/json'
+            });
+        }
+         
+        function actualizacion(datos) {
+            $("#GridData").html(datos);
+            $(".field-validation-error").hide();
+        }
+
+        function busqueda() {
+            var busqueda = $("#Busqueda").val();
+            $.ajax({
+                type: "GET",
+                cache: false,
+                async:false,
+                url: "@Url.Action("Busqueda", "Acarreos")",
+                data: { bus: busqueda },
+                success: function(result) {
+                    debugger;
+                    actualizacion(result);
+                },
+                contentType: 'application/json'
+            });
+        }
+    
+    </script>
+</head>
+@using (Html.BeginForm())
+{
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Nombre)
+    </div>
+     <div class="editor-label">
+   
+    @Html.DropDownListFor(m => m.ProveedorId, ViewBag.Proveedor as SelectList, "Seleccione El Nombre del acarreo")
+    @Html.ValidationMessageFor(m => m.ProveedorId)
+    </div>
+    <div class="editor-label">
+        @Html.Label("Numero Factura")
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Numero_Factura)
+        @Html.ValidationMessageFor(model => model.Numero_Factura)
+    </div>
+    
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Fecha)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Fecha)
+        @Html.ValidationMessageFor(model => model.Fecha)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Importe)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Importe)
+        @Html.ValidationMessageFor(model => model.Importe)
+    </div>
+
+    
+     <div>
+         Buscador de Despachos
+     </div>
+     <div>
+         @Html.TextBox("Busqueda")
+     </div>
+     <p>
+         <button value="Busqueda" id="Busqueda" class="btn" onclick="javascript:busqueda();">Busqueda</button>
+     </p>
+ 
+    @Html.Label("Escoja el Despacho")
+    @Html.ValidationMessage("Productos")
+
+    <div id="GridData">
+        @Html.Partial("Grilla")
+    </div>
+
+    <p>
+        <input type="submit" value="Crear" class="btn" />
+    </p>
+
+}
+
+<div >
+    @Html.ActionLink("Volver", "Index")
+</div>

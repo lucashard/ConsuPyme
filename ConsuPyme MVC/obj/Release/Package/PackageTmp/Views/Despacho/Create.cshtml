@@ -1,0 +1,163 @@
+﻿@model ConsuPyme_MVC.Models.Despachantes
+
+@{
+    ViewBag.Title = "Create";
+    WebGrid grid = new WebGrid(source: Model., rowsPerPage: 1);
+}
+
+<h2>Crear Despachante</h2>
+<head>
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+<link href="@Url.Content("~/Content/layout.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+</head>
+@using (Html.BeginForm()) {
+    
+    
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Nombre)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nombre)
+            @Html.ValidationMessageFor(model => model.Nombre)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Numero_Factura)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Numero_Factura)
+            @Html.ValidationMessageFor(model => model.Numero_Factura)
+        </div>
+
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Ley)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Ley)
+            @Html.ValidationMessageFor(model => model.Ley)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Djai)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Djai)
+            @Html.ValidationMessageFor(model => model.Djai)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.AD_Sim)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.AD_Sim)
+            @Html.ValidationMessageFor(model => model.AD_Sim)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Gastos_Despacho)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Gastos_Despacho)
+            @Html.ValidationMessageFor(model => model.Gastos_Despacho)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Desconsolidado)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Desconsolidado)
+            @Html.ValidationMessageFor(model => model.Desconsolidado)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Servicios)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Servicios)
+            @Html.ValidationMessageFor(model => model.Servicios)
+        </div>
+      @Html.Label("Escoja el Despacho")
+    <div style="width: 50%;">
+        <table class="table-striped" id="tabla">
+            <tr>
+                <th>
+                    Codigo afip
+                </th>
+                <th>
+                    Dc
+                </th>
+                <th>
+                    Cotizacion
+                </th>
+                <th>
+                    Flete total
+                </th>
+                <th>
+                    Fob total
+                </th>
+                <th>
+                    Arancel sim
+                </th>
+                <th>
+                    Servicio guarda
+                </th>
+                <th>
+                    Servicio total
+                </th>
+                <th>
+                    Costo despacho productos
+                </th>
+
+                <th>Seleccionar</th>
+            </tr>
+
+            @foreach (var item in ViewBag.Productos as List<ConsuPyme_MVC.Models.Despachos>)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Codigo_Afip)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Dc)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelitem=>item.Cotizacion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelitem=>item.Flete_Total)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelitem=>item.Fob_Total)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelitem=>item.Arancel_Sim)
+                    </td>
+                     <td>
+                        @Html.DisplayFor(modelitem=>item.Servicio_Guarda)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelitem=>item.Seguro_Total)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelitem=>item.Costo_despacho_producto)
+                    </td>
+                    <td>
+                        @*@Html.CheckBoxFor(modelItem => item.Visible)*@
+                        <input type="checkbox" name="visible" value="@item.Id" />
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+        <p>
+            <input type="submit" value="Guardar" />
+        </p>
+}
+
+<div>
+    @Html.ActionLink("Volver", "Index")
+</div>

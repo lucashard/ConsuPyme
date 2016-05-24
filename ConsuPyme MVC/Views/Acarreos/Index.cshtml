@@ -1,0 +1,43 @@
+﻿@model IEnumerable<ConsuPyme_MVC.Models.Acarreos>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+<head>
+<link href="@Url.Content("~/Content/layout.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+</head>
+<h2>Listado Acarreo</h2>
+
+<p>
+    <input type="button" title="Crear" value="Crear Acarreo" onclick="location.href='@Url.Action("Create", "Acarreos")'" class="btn"/>
+</p>
+  
+@{
+    var grid = new WebGrid(source: Model,
+        defaultSort: "Rank",
+        canSort: true,
+        rowsPerPage: 10
+       );
+}
+<div style="width: 60%;">
+   @grid.GetHtml("webgrid", "webgrid-header", "webgrid-footer",
+        alternatingRowStyle: "webgrid-alternating-row",
+        selectedRowStyle: "webgrid-selected-row",
+        rowStyle: "webgrid-row-style",
+        columns: grid.Columns(
+                                            grid.Column("Nombre", "Nombre"),
+                                            grid.Column("Numero_Factura", "Numero Factura"),
+                                                            grid.Column("Importe", "Importe"),
+                    grid.Column("Acciones", format: @<text>
+    @Html.ActionLink("Editar", "Edit", new { id = item.Id })
+    |
+   @Html.ActionLink("Eliminar", "Delete", new { id = item.Id }, new { onclick = "return confirm('¿Estas seguro de borrar el acarreo?');" })
+    </text>)
+            )
+        )
+</div>
+
+

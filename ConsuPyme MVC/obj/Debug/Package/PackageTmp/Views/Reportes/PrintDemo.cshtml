@@ -1,0 +1,41 @@
+﻿@using ConsuPyme_MVC.Models
+<br/>
+<img src="@Model.ImageUrl" width="64" height="64" />
+<br/>
+<br/>
+<label>@Model.Dolares</label>
+<br/>
+<br/>
+<table cellpadding="3" cellspacing="3">
+    <tr border="1" bgcolor="#777777" color="#ffffff">
+        <td width="20%" align="center">
+            Nombre
+        </td>
+        <td width="50%" align="center">
+            Precio
+        </td>
+    </tr>
+    @{
+        var OddColor = "#DDEEEE";
+        var evenColor = "#EEFFFF";
+        var Odd = OddColor;
+    }
+    @foreach (ListadoProductoReporte customer in Model)
+    {
+        <tr border="1" bgcolor="@Odd">
+            <td>@customer.Nombre
+            </td>
+            <td>@customer.Precio
+            </td>
+        </tr>
+        if (Odd == OddColor)
+        {
+            Odd = evenColor;
+        }
+        else
+        {
+            Odd = OddColor;
+        }
+
+    }
+</table>

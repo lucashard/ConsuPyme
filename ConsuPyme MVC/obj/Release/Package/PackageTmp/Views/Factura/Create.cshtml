@@ -1,0 +1,193 @@
+﻿@model ConsuPyme_MVC.Models.Facturas
+@{
+    ViewBag.Title = "Create";
+    WebGrid grid = new WebGrid(source: Model.lista_Productos, rowsPerPage: 1);
+}
+<h2>
+    Crear Factura</h2>
+<a href="http://apycom.com/"></a>
+<head>
+    <link href="@Url.Content("~/Content/layout.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    
+    <script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+    @*<script src="@Url.Content("~/Scripts/jquery-2.0.2.min.js")" type="text/javascript"></script>*@
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    
+       
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <script type="text/javascript">
+  function guardar() {
+
+      //alert($("#nombre").val());
+        var myData = new Array();
+      debugger;
+      var FacturasTotales1=
+      {
+            N_Orden:$("#FacturasTotales_N_Orden").val(),
+            Nombre:$("#FacturasTotales_Nombre").val(),
+            Numero_Factura:$("#FacturasTotales_Numero_Factura").val(),
+            Creacion:new Date()
+      };
+        
+      $(".webgrid").each(function () {
+          debugger;
+          var chk = $(this).find(":checkbox").is(':checked');
+          if (chk==true)
+            {
+            var fields = $(this).find(":text");
+            var field1 = $(this).find(":hidden");
+            var lote = fields.eq(0).val();
+            var IDHidden = field1.eq(0).val();
+            var precio = fields.eq(1).val();
+            var cantidad = fields.eq(2).val();
+            var articulos = {
+                id:IDHidden,
+                lote: lote,
+                precio: precio,
+                cantidad: cantidad
+            };
+              
+       myData.push(articulos);      
+            
+             }   
+            
+            
+        });
+      
+       
+              var facturas = {
+                  grilla: myData,
+                  FacturasTotales:FacturasTotales1,
+                  Flete1:parseFloat($("#Flete").val()),
+                  Envalaje1: parseFloat($("#Envalaje").val())
+              };
+
+      $.ajax({
+          type: "POST",
+          url: "@Url.Action("Create", "Factura")",
+          data: JSON.stringify(facturas),
+          success: function() {
+              
+          
+  },
+            contentType: 'application/json'
+        });
+            
+            
+        }
+  
+
+        $(document).ready(function () {
+            $("#Cantidad").val('');
+            $(function ($) {
+                $.datepicker.regional['es'] = {
+                    closeText: 'Cerrar',
+                    prevText: '<Ant',
+                    nextText: 'Sig>',
+                    currentText: 'Hoy',
+                    monthNames: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'],
+                    monthNamesShort: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
+                    dayNames: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+                    dayNamesShort: ['Dom', 'Lun', 'Mar', 'Mié', 'Juv', 'Vie', 'Sáb'],
+                    dayNamesMin: ['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'],
+                    weekHeader: 'Sm',
+                    dateFormat: 'dd/mm/yy',
+                    firstDay: 1,
+                    isRTL: false,
+                    showMonthAfterYear: false,
+                    yearSuffix: ''
+                };
+                $.datepicker.setDefaults($.datepicker.regional['es']);
+            });
+            $("#FacturasTotales_Creacion").datepicker();
+
+           
+//            $('#tabla input:checkbox[name=visible]:checked').each(function () {
+            
+        });
+    //});
+
+    </script>
+</head>
+@*@using (Html.BeginForm())
+{
+*@
+    <div class="editor-label">
+        @Html.LabelFor(model => model.FacturasTotales.Nombre)
+    </div>
+<div class="editor-field">
+    
+    @Html.EditorFor(model => model.FacturasTotales.Nombre)
+    @Html.ValidationMessageFor(model => model.FacturasTotales.Nombre)
+</div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.FacturasTotales.N_Orden)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.FacturasTotales.N_Orden)
+        @Html.ValidationMessageFor(model => model.FacturasTotales.N_Orden)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.FacturasTotales.Numero_Factura)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.FacturasTotales.Numero_Factura)
+        @Html.ValidationMessageFor(model => model.FacturasTotales.Numero_Factura)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.FacturasTotales.Creacion)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.FacturasTotales.Creacion)
+        @Html.ValidationMessageFor(model => model.FacturasTotales.Creacion)
+    </div>
+
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Flete)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Flete)
+        @Html.ValidationMessageFor(model => model.Flete)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Envalaje)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Envalaje)
+        @Html.ValidationMessageFor(model => model.Envalaje)
+    </div>
+    <div class="person">
+    @grid.GetHtml(
+    tableStyle: "webgrid",
+headerStyle: "webgrid-header",
+footerStyle: "webgrid-footer",
+alternatingRowStyle: "webgrid-alternating-row",
+selectedRowStyle: "webgrid-selected-row",
+rowStyle: "webgrid-row-style",
+columns:
+            grid.Columns(
+            grid.Column(null,null,format: @<input type="hidden" name="IDHidden"  id="IDHidden" value="@item.Id"/>),
+            grid.Column("Codigo", "Codigo", canSort: false),
+            grid.Column("Descripcion", "Descripcion", canSort: false),
+            grid.Column("Num_Lote", "Num_Lote", canSort: false, format: @<input type="text" name="nlote" id="nlote" value="" />),
+            grid.Column("Precio_Unitario", "Precio_Unitario", canSort: false, format: @<input type="text" id="precio"  name="precio" />),
+            grid.Column("Cantidad", "Cantidad", canSort: false, format: @<input type="text" id="cantidad" name="cantidad" />),
+            grid.Column("Seleccionar", canSort: false, format: @<input type="checkbox" id="visible" name="visible" value="@item.Id" />)), htmlAttributes: new { id = "Id" })
+ 
+    </div>
+    <p>
+        <button class="save-user edit-mode" onclick="guardar();">Guardar</button>
+    </p>
+
+
+    <div>
+        @Html.ActionLink("Volver", "Index")
+    </div>
+@*}*@

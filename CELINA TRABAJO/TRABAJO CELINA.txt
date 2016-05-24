@@ -1,0 +1,31 @@
+EL PRODUCTO YA TRAE UNA POSICION ARANCELARIA	OK
+1 POSICION ARANCELARIA TIENE MUCHOS PRODUCTOS	OK
+EN LA FACTURA NO TENGO ACARREO, DEPOSITO, NI DESPACHO OK PERO CON DUDA X EL NOMBRE MAL PUESTO ES/DUDA
+EL DEPOSITO Y EL ACARREO ES SOBRE EL PRODUCTO??? ESTA PERFECTO
+asocio el despachante al producto?
+
+DEPACHO ES LA HOJA DE afip
+NUMERO 12073IPO04, TA SUBRAYADO EN LA HOJA
+FECHA ES LA OFICIALIZACION 18/12/2012
+seleccionas la facturas y despues los productos de dicha factura
+//escribis el producto y lo asocias con una poscicon arancelaria --YA LO TRAE ESTABLECIDO EL PRODUCTO
+FOB TOTAL
+costo_despacho_producto=sumo paso 5 6 7 y lo divido x la cantidad de productos que tiene el despacho //campo en la tabla Despacho
+
+
+ESTADISTICA DE CUANTO LE COMPRO AL PROVEDOR -CANTIDAD, TIPO DE PRODUCTO, PRECIO DE COMPRA Y TOTAL, TODO LO FILTRO X FECHA
+Gpn y rpn 1 campo llamado codigo
+
+en despachante borro total
+
+costo de importacion
+todo a dolar en sumatoria de acarreo y deposito
+nombre producto, cantidad, valor fob,flete(sumatoria de paso 5+6+7/cantidad), gastos del despachante, acarreo, deposito, 
+
+costo del productos
+en dolares o pesos, la suma la paso segun la cotizacion
+costo total del producto 
+
+sumatoria de acarreo * la cotizacion  de hoy/cant de productos del despacho
+
+

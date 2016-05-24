@@ -1,0 +1,20 @@
+﻿@{ var grid = new WebGrid(source: ViewBag.Facturas,
+       defaultSort: "Rank",
+       // ajaxUpdateContainerId: "contenedor-grid",
+       canSort: true,
+       rowsPerPage: 1
+       ); }
+
+<div style="width: 60%;">
+    @grid.GetHtml("grid", "head",
+        alternatingRowStyle: "alt",
+        htmlAttributes: new {id = "tabla"},
+        columns: grid.Columns(
+            grid.Column("N_Orden", "Numero de orden"),
+            grid.Column("Nombre", "Nombre"),
+            grid.Column("Numero_Factura", "Numero de factura"),
+            grid.Column("Seleccionar", format: @<input name="visible" id="visible" type="checkbox" value="@item.Value.Id" onclick=" ver_Productos(); "  />)
+            )
+        ) 
+            
+</div>

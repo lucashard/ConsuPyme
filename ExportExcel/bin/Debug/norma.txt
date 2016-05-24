@@ -1,0 +1,37 @@
+Norma
+
+ FACTURAS: 
+ *  No se despliega los nombre de los proveedores (cuyos datos ya te envíe).
+Acordate que debe salir cuando uno coloca por ejemplo  Co.., inmediatamente debe desplegarse y mostrar los nombres de los proveedores.
+ *  En el Vto. de las facturas en lugar colocar meses debe ser días: 30; 100: 150; 200; 300 y que  calcule estos días desde la fecha de la factura ( por ej. si la factura tiene fecha 10/12/2015 y el Vencimiento es a 150 días, debe figurar 10/05/2016).
+ 
+2 - PRODUCTOS:
+ 
+ Sigue sin aparecer la totalidad de los productos que también te lo había reenviado . Te lo vuelvo a reenviar una vez más. Fijate si se puede respetar el orden en que te lo mando.
+ 
+3 - ACARREO:
+ 
+ No se despliega ningún nombre.
+ 
+4 - DEPACHO:
+ 
+Directamente no me figura este item para cargar despachos.
+ 
+5 - DESPACHANTE:
+Cuando abris este item figura como nombre despachante el nombre del acarreo.
+cuando le doy crear despachante, no se despliega el nombre y  si le doy otro clic en crear aparece "Crear Despacho"
+ 
+6 - DEPOSITO:
+ 
+Le doy crear y me aparece "Crear Despacho". El nombre del depósito no es el que figura., 
+ 
+ 
+ 7 - REPORTE:
+Fijate que este item como el de Despacho no está en la misma linea que el resto de los item, recién lo ves cuando abris algún otro.
+* Donde dice Despacho, debe figurar los nombres de los proveedores. Cuando quiero abrir y ver los otros proveedores me aparece "Crear Despacho".
+ 
+* No figura la posibilidad de ver estadisticas de productos.
+ 
+* Donde figura el lugar para cargar la cotización del dólar todos los días?
+ 
+ 

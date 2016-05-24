@@ -1,0 +1,45 @@
+﻿@model ConsuPyme_MVC.Models.Depositos
+
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+<a href="http://apycom.com/"></a>
+<head>
+<link href="@Url.Content("~/Content/layout.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+</head>
+<h2>Listado Deposito</h2>
+
+<p>
+    <input type="button" title="Crear" value="Crear Deposito" onclick="location.href='@Url.Action("Create", "Deposito")'" class="btn"/>
+</p>
+
+
+  
+  @{
+      var grid = new WebGrid(source: Model.lista_productos.Values,
+        defaultSort: "Rank",
+        canSort: true,
+        rowsPerPage: 10
+       );
+  }
+  
+  <div style="width: 60%;">
+ @grid.GetHtml("webgrid", "webgrid-header", "webgrid-footer",
+        alternatingRowStyle: "webgrid-alternating-row",
+        selectedRowStyle: "webgrid-selected-row",
+        rowStyle: "webgrid-row-style",
+    columns: grid.Columns(
+                  grid.Column("Importe", "Importe"),
+                  grid.Column("Nombre", "Nombre"),
+                  grid.Column("Numero_Factura", "Numero Factura"),
+        grid.Column("Acciones", format: @<text>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.Id })
+                    |
+                     @Html.ActionLink("Eliminar", "Delete", new { id=item.Id },new { onclick = "return confirm('¿Estas seguro de borrar el deposito?');" })
+                  </text>)
+        )
+    )
+
+</div>

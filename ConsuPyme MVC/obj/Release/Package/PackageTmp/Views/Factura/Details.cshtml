@@ -1,0 +1,105 @@
+﻿@model ConsuPyme_MVC.Models.Facturas
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Flete)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Flete)
+            @Html.ValidationMessageFor(model => model.Flete)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Envalaje)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Envalaje)
+            @Html.ValidationMessageFor(model => model.Envalaje)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Cantidad)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Cantidad)
+            @Html.ValidationMessageFor(model => model.Cantidad)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Producto_Id)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Producto_Id)
+            @Html.ValidationMessageFor(model => model.Producto_Id)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Posicion_ArancelariaId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Posicion_ArancelariaId)
+            @Html.ValidationMessageFor(model => model.Posicion_ArancelariaId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Deposito_Id)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Deposito_Id)
+            @Html.ValidationMessageFor(model => model.Deposito_Id)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Despacho_Id)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Despacho_Id)
+            @Html.ValidationMessageFor(model => model.Despacho_Id)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Total)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Total)
+            @Html.ValidationMessageFor(model => model.Total)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Factura_Total_Id)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Factura_Total_Id)
+            @Html.ValidationMessageFor(model => model.Factura_Total_Id)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Acarreo_Id)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Acarreo_Id)
+            @Html.ValidationMessageFor(model => model.Acarreo_Id)
+        </div>
+
+        <p>
+            <input type="submit" value="Guardar" />
+        </p>
+    
+}
+
+<div>
+    @Html.ActionLink("Volver", "Index")
+</div>

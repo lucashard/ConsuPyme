@@ -1,0 +1,179 @@
+﻿@model ConsuPyme_MVC.Models.Despachos
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Crear Despachos</h2>
+<head>
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+    <link href="@Url.Content("~/Content/layout.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-2.0.2.min.js")"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            
+        });
+
+        function ver_Productos() {
+            var myData = new Array();
+            $('#tabla input:checkbox[name=visible]:checked').each(function () {
+                myData.push(parseInt($(this).val()));
+            });
+            debugger;
+            $.ajax({
+                type: "POST",
+                url: "@Url.Action("Productos", "Despachos")",
+                data: {vector:JSON.stringify( myData)},
+                cache: false,
+                success: function (data) {
+                    debugger;
+                    var productos = "";
+                    productos += "<div style='width: 50%;'><table class='table-striped' id='tabla'><tr><th>Descripcion</th><th>Codigo</th><th>Numero de lote</th><th>Precio unitario</th><th>Seleccionar</th></tr>";
+                    for (var i = 0; i < data.Lista.length; i++) {
+                        productos += "<tr>";
+                        productos += "<td>" + data.Lista[i].Descripcion.toString() + "</td>";
+                        productos += "<td>" + data.Lista[i].Codigo.toString() + "</td>";
+                        productos += "<td>" + data.Lista[i].Num_Lote.toString() + "</td>";
+                        productos += "<td>" + data.Lista[i].Precio_Unitario.toString() + "</td>";
+                        productos += "<td> <input type='checkbox' name='producto_visible' value='"+data.Lista[i].Id.toString()+"' /></td>";
+                        productos += "</tr>";
+                    }
+                    productos += "</table></div>";
+                    $("#productos").append(productos);
+                }
+            });
+        }
+    </script>
+    </head>
+
+@using (Html.BeginForm()) {
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Costo_despacho_producto)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Costo_despacho_producto)
+            @Html.ValidationMessageFor(model => model.Costo_despacho_producto)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Dc)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Dc)
+            @Html.ValidationMessageFor(model => model.Dc)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Oficializacion)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Oficializacion)
+            @Html.ValidationMessageFor(model => model.Oficializacion)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Fob_Total)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Fob_Total)
+            @Html.ValidationMessageFor(model => model.Fob_Total)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Flete_Total)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Flete_Total)
+            @Html.ValidationMessageFor(model => model.Flete_Total)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Seguro_Total)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Seguro_Total)
+            @Html.ValidationMessageFor(model => model.Seguro_Total)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Cotizacion)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Cotizacion)
+            @Html.ValidationMessageFor(model => model.Cotizacion)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Codigo_Afip)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Codigo_Afip)
+            @Html.ValidationMessageFor(model => model.Codigo_Afip)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Arancel_Sim)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Arancel_Sim)
+            @Html.ValidationMessageFor(model => model.Arancel_Sim)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Servicio_Guarda)
+        </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.Servicio_Guarda)
+        @Html.ValidationMessageFor(model => model.Servicio_Guarda)
+    </div>
+    
+    <div style="width: 50%;">
+        <table class="table-striped" id="tabla">
+            <tr>
+                <th>
+                    Numero de orden
+                </th>
+                <th>
+                    Nombre
+                </th>
+                <th>
+                    Numero de factura
+                </th>
+                <th>Seleccionar</th>
+            </tr>
+
+            @foreach (var item in ViewBag.Facturas as List<ConsuPyme_MVC.Models.FacturasTotales>)
+            {
+                
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.N_Orden)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Numero_Factura)
+                    </td>
+                    <td>
+                        <input type="checkbox" name="visible" value="@item.Id" />
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+    @*<input type="button" onclick="ver_Productos();" value="Ver Productos" />*@
+    
+    <div id="productos"></div>
+
+        <p>
+            <input type="submit" value="Crear"  />
+        </p>
+    
+}
+
+<div>
+    @Html.ActionLink("Volver", "Index")
+</div>

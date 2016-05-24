@@ -1,0 +1,6 @@
+C:\Users\arx0000137\Documents\CONSUPYME\PdfReportGenerator\bin\Release\PdfReportGenerator.dll
+C:\Users\arx0000137\Documents\CONSUPYME\PdfReportGenerator\bin\Release\PdfReportGenerator.pdb
+C:\Users\arx0000137\Documents\CONSUPYME\PdfReportGenerator\bin\Release\itextsharp.dll
+C:\Users\arx0000137\Documents\CONSUPYME\PdfReportGenerator\obj\Release\PdfReportGenerator.csprojResolveAssemblyReference.cache
+C:\Users\arx0000137\Documents\CONSUPYME\PdfReportGenerator\obj\Release\PdfReportGenerator.dll
+C:\Users\arx0000137\Documents\CONSUPYME\PdfReportGenerator\obj\Release\PdfReportGenerator.pdb

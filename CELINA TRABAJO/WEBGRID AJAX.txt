@@ -1,0 +1,59 @@
+		 <script type="text/javascript">
+        $(function () {
+            $(':checkbox').change(function () {
+                $.ajax({
+                    url: '@Url.Action("Select","Posicion_Arancelaria")',
+                    type: 'POST',
+                    data: { isChecked: $(this).is(':checked'), id: $(this).val() },
+                    success: function (result) {
+                    }
+                });
+            });
+        });
+    </script>
+
+<div style="width: 60%;">
+         @grid.GetHtml("grid", "head",
+               alternatingRowStyle: "alt",
+               columns: grid.Columns(
+                   grid.Column("Codigo afip", "Codigo"),
+                   grid.Column("Dc", "Descripcion"),
+                   grid.Column("Cotizacion", "Cotizacion"),
+                   grid.Column(" Flete total", "Flete Total"),
+                   grid.Column("Fob total", "Fob total"),
+                   grid.Column("Servicio guarda", "Servicio guarda"),
+                   grid.Column("Servicio total", "Servicio total"),
+                   grid.Column("Costo despacho productos", "Costo despacho productos"),
+                             grid.Column("Seleccionar", format: @<input name="visible" type="checkbox" value="@item.Value.Id" @Html.Raw(((List<string>)ViewData["SelectList"]).Contains(((((System.Web.Helpers.WebGridRow)(@item))).Value).Id.ToString()) ? "checked" : "") />)
+                                       )
+                                   ) 
+            
+    </div>
+	
+	public ActionResult Index()
+        {
+            //Persistencia de Checkbox
+            ViewData["SelectList"] = HttpContext.Session["SelectList"] ?? new List<String>();
+            return View(_posicion.Index());
+        }
+	
+	private static List<string> selectList;
+
+	
+  [HttpPost]
+        public ActionResult Select(bool isChecked, String id)
+        {
+            selectList = (List<String>)HttpContext.Session["SelectList"] ?? new List<String>();
+            if (isChecked && !selectList.Contains(id))
+            {
+                selectList.Add(id);
+            }
+            else if (!isChecked && selectList.Contains(id))
+            {
+                selectList.RemoveAll(s => s == id);
+            }
+            HttpContext.Session["SelectList"] = selectList;
+
+            return Content("OK");
+        }
+		

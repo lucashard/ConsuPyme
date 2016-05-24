@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ConsuPymeModelStoreContainer" CdmEntityContainer="ConsuPymeEntities1">
+    <EntitySetMapping Name="Acarreo">
+      <EntityTypeMapping TypeName="IsTypeOf(ConsuPymeModel.Acarreo)">
+        <MappingFragment StoreEntitySet="Acarreo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Importe" ColumnName="Importe" />
+          <ScalarProperty Name="Numero_Factura" ColumnName="Numero_Factura" />
+          <ScalarProperty Name="DespachoId" ColumnName="DespachoId" />
+          <ScalarProperty Name="Fecha_Factura" ColumnName="Fecha_Factura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Deposito">
+      <EntityTypeMapping TypeName="IsTypeOf(ConsuPymeModel.Deposito)">
+        <MappingFragment StoreEntitySet="Deposito">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Importe" ColumnName="Importe" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Numero_Factura" ColumnName="Numero_Factura" />
+          <ScalarProperty Name="DespachoId" ColumnName="DespachoId" />
+          <ScalarProperty Name="Fecha_Factura" ColumnName="Fecha_Factura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Despachante">
+      <EntityTypeMapping TypeName="IsTypeOf(ConsuPymeModel.Despachante)">
+        <MappingFragment StoreEntitySet="Despachante">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Numero_Factura" ColumnName="Numero_Factura" />
+          <ScalarProperty Name="Ley" ColumnName="Ley" />
+          <ScalarProperty Name="Djai" ColumnName="Djai" />
+          <ScalarProperty Name="AD_Sim" ColumnName="AD_Sim" />
+          <ScalarProperty Name="Gastos_Despacho" ColumnName="Gastos_Despacho" />
+          <ScalarProperty Name="Desconsolidado" ColumnName="Desconsolidado" />
+          <ScalarProperty Name="Servicios" ColumnName="Servicios" />
+          <ScalarProperty Name="DespachoId" ColumnName="DespachoId" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Gestion_Urgente" ColumnName="Gestion_Urgente" />
+          <ScalarProperty Name="Federal_Express" ColumnName="Federal_Express" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Despacho">
+      <EntityTypeMapping TypeName="IsTypeOf(ConsuPymeModel.Despacho)">
+        <MappingFragment StoreEntitySet="Despacho">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Dc" ColumnName="Dc" />
+          <ScalarProperty Name="Oficializacion" ColumnName="Oficializacion" />
+          <ScalarProperty Name="Fob_Total" ColumnName="Fob_Total" />
+          <ScalarProperty Name="Flete_Total" ColumnName="Flete_Total" />
+          <ScalarProperty Name="Seguro_Total" ColumnName="Seguro_Total" />
+          <ScalarProperty Name="Cotizacion" ColumnName="Cotizacion" />
+          <ScalarProperty Name="Codigo_Afip" ColumnName="Codigo_Afip" />
+          <ScalarProperty Name="Arancel_Sim" ColumnName="Arancel_Sim" />
+          <ScalarProperty Name="Servicio_Guarda" ColumnName="Servicio_Guarda" />
+          <ScalarProperty Name="Tipo_CambioId" ColumnName="Tipo_CambioId" />
+          <ScalarProperty Name="Gasto_Aduana" ColumnName="Gasto_Aduana" />
+          <ScalarProperty Name="Derechos" ColumnName="Derechos" />
+          <ScalarProperty Name="Taza_Estadistica" ColumnName="Taza_Estadistica" />
+          <ScalarProperty Name="Multa" ColumnName="Multa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Factura">
+      <EntityTypeMapping TypeName="IsTypeOf(ConsuPymeModel.Factura)">
+        <MappingFragment StoreEntitySet="Factura">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Fecha_Embarque" ColumnName="Fecha_Embarque" />
+          <ScalarProperty Name="Envalaje" ColumnName="Envalaje" />
+          <ScalarProperty Name="Factura_Total_Id" ColumnName="Factura_Total_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Factura_Despacho">
+      <EntityTypeMapping TypeName="IsTypeOf(ConsuPymeModel.Factura_Despacho)">
+        <MappingFragment StoreEntitySet="Factura_Despacho">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DespachoId" ColumnName="DespachoId" />
+          <ScalarProperty Name="FacturaId" ColumnName="FacturaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Factura_Total">
+      <EntityTypeMapping TypeName="IsTypeOf(ConsuPymeModel.Factura_Total)">
+        <MappingFragment StoreEntitySet="Factura_Total">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Vencimiento_Factura" ColumnName="Vencimiento_Factura" />
+          <ScalarProperty Name="Creacion" ColumnName="Creacion" />
+          <ScalarProperty Name="Numero_Factura" ColumnName="Numero_Factura" />
+          <ScalarProperty Name="ProveedorId" ColumnName="ProveedorId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Posicion_Arancelaria">
+      <EntityTypeMapping TypeName="IsTypeOf(ConsuPymeModel.Posicion_Arancelaria)">
+        <MappingFragment StoreEntitySet="Posicion_Arancelaria">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Numero_Posicion" ColumnName="Numero_Posicion" />
+          <ScalarProperty Name="Porcentaje_Iva" ColumnName="Porcentaje_Iva" />
+          <ScalarProperty Name="Porcentaje_Taza_Estadistica" ColumnName="Porcentaje_Taza_Estadistica" />
+          <ScalarProperty Name="Porcentaje_Importacion" ColumnName="Porcentaje_Importacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Producto">
+      <EntityTypeMapping TypeName="IsTypeOf(ConsuPymeModel.Producto)">
+        <MappingFragment StoreEntitySet="Producto">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Posicion_ArancelariaId" ColumnName="Posicion_ArancelariaId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="IsTypeOf(ConsuPymeModel.Usuarios)">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Clave" ColumnName="Clave" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Factura_Total_Producto">
+      <EntityTypeMapping TypeName="IsTypeOf(ConsuPymeModel.Factura_Total_Producto)">
+        <MappingFragment StoreEntitySet="Factura_Total_Producto">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Num_Lote" ColumnName="Num_Lote" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Precio_Unitario" ColumnName="Precio_Unitario" />
+          <ScalarProperty Name="ProductoId" ColumnName="ProductoId" />
+          <ScalarProperty Name="Factura_TotalId" ColumnName="Factura_TotalId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo_Cambio">
+      <EntityTypeMapping TypeName="IsTypeOf(ConsuPymeModel.Tipo_Cambio)">
+        <MappingFragment StoreEntitySet="Tipo_Cambio">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Cambio" ColumnName="Cambio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proveedor">
+      <EntityTypeMapping TypeName="IsTypeOf(ConsuPymeModel.Proveedor)">
+        <MappingFragment StoreEntitySet="Proveedor">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="listado_factura_producto" FunctionName="ConsuPymeModel.Store.listado_factura_producto">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ConsuPymeModel.listado_factura_producto_Result">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="id_factura_total" ColumnName="id factura total" />
+          <ScalarProperty Name="id_producto" ColumnName="id producto" />
+          <ScalarProperty Name="Precio_Unitario" ColumnName="Precio_Unitario" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Num_Lote" ColumnName="Num_Lote" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="baja_factura" FunctionName="ConsuPymeModel.Store.baja_factura" />
+    <FunctionImportMapping FunctionImportName="baja_facturacion" FunctionName="ConsuPymeModel.Store.baja_factura" />
+    <FunctionImportMapping FunctionImportName="listado_Facturas" FunctionName="ConsuPymeModel.Store.listado_Facturas">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ConsuPymeModel.listado_Facturas_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Creacion" ColumnName="Creacion" />
+          <ScalarProperty Name="Vencimiento_Factura" ColumnName="Vencimiento_Factura" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Numero_Factura" ColumnName="Numero_Factura" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="listado_Facturas2" FunctionName="ConsuPymeModel.Store.listado_Facturas">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ConsuPymeModel.listado_Facturas_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Creacion" ColumnName="Creacion" />
+          <ScalarProperty Name="Vencimiento_Factura" ColumnName="Vencimiento_Factura" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="Numero_Factura" ColumnName="Numero_Factura" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="baja_despacho" FunctionName="ConsuPymeModel.Store.baja_despacho" />
+    <FunctionImportMapping FunctionImportName="baja_despachos" FunctionName="ConsuPymeModel.Store.baja_despacho" />
+    <FunctionImportMapping FunctionImportName="listado_despachante" FunctionName="ConsuPymeModel.Store.listado_despachante">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ConsuPymeModel.listado_despachante_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Dc" ColumnName="Dc" />
+          <ScalarProperty Name="Cotizacion" ColumnName="Cotizacion" />
+          <ScalarProperty Name="Codigo_Afip" ColumnName="Codigo_Afip" />
+          <ScalarProperty Name="Arancel_Sim" ColumnName="Arancel_Sim" />
+          <ScalarProperty Name="Flete_Total" ColumnName="Flete_Total" />
+          <ScalarProperty Name="Oficializacion" ColumnName="Oficializacion" />
+          <ScalarProperty Name="Fob_Total" ColumnName="Fob_Total" />
+          <ScalarProperty Name="Seguro_Total" ColumnName="Seguro_Total" />
+          <ScalarProperty Name="Servicio_Guarda" ColumnName="Servicio_Guarda" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="listado_acarreo" FunctionName="ConsuPymeModel.Store.listado_acarreo">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ConsuPymeModel.listado_acarreo_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Dc" ColumnName="Dc" />
+          <ScalarProperty Name="Cotizacion" ColumnName="Cotizacion" />
+          <ScalarProperty Name="Codigo_Afip" ColumnName="Codigo_Afip" />
+          <ScalarProperty Name="Arancel_Sim" ColumnName="Arancel_Sim" />
+          <ScalarProperty Name="Flete_Total" ColumnName="Flete_Total" />
+          <ScalarProperty Name="Oficializacion" ColumnName="Oficializacion" />
+          <ScalarProperty Name="Fob_Total" ColumnName="Fob_Total" />
+          <ScalarProperty Name="Seguro_Total" ColumnName="Seguro_Total" />
+          <ScalarProperty Name="Servicio_Guarda" ColumnName="Servicio_Guarda" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="listado_deposito" FunctionName="ConsuPymeModel.Store.listado_deposito">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ConsuPymeModel.listado_deposito_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Dc" ColumnName="Dc" />
+          <ScalarProperty Name="Cotizacion" ColumnName="Cotizacion" />
+          <ScalarProperty Name="Codigo_Afip" ColumnName="Codigo_Afip" />
+          <ScalarProperty Name="Arancel_Sim" ColumnName="Arancel_Sim" />
+          <ScalarProperty Name="Flete_Total" ColumnName="Flete_Total" />
+          <ScalarProperty Name="Oficializacion" ColumnName="Oficializacion" />
+          <ScalarProperty Name="Fob_Total" ColumnName="Fob_Total" />
+          <ScalarProperty Name="Seguro_Total" ColumnName="Seguro_Total" />
+          <ScalarProperty Name="Servicio_Guarda" ColumnName="Servicio_Guarda" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Ver_Despacho" FunctionName="ConsuPymeModel.Store.Ver_Despacho">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ConsuPymeModel.Ver_Despacho_Result">
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="ver_despacho_fecha" FunctionName="ConsuPymeModel.Store.Ver_Despacho_Fecha">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ConsuPymeModel.ver_despacho_fecha_Result1">
+          <ScalarProperty Name="cotizacion" ColumnName="cotizacion" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="cantidad_Producto" FunctionName="ConsuPymeModel.Store.cantidad_Producto">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ConsuPymeModel.cantidad_Producto_Result">
+          <ScalarProperty Name="producto" ColumnName="producto" />
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

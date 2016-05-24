@@ -1,0 +1,6 @@
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ReadExcel\bin\Debug\ReadExcel.exe.config
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ReadExcel\bin\Debug\ReadExcel.exe
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ReadExcel\bin\Debug\ReadExcel.pdb
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ReadExcel\obj\Debug\ReadExcel.exe
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ReadExcel\obj\Debug\ReadExcel.pdb
+C:\Users\Lucas\documents\visual studio 2012\Projects\ConsuPyme MVC\ReadExcel\obj\Debug\ReadExcel.csprojResolveAssemblyReference.cache

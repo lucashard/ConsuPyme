@@ -1,0 +1,51 @@
+﻿
+@model ConsuPyme_MVC.Models.Despachos
+
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+
+<a href="http://apycom.com/"></a>
+<head>
+    <link href="@Url.Content("~/Content/layout.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+</head>
+<h2>Listado Despachos</h2>
+
+<p>
+    <input type="button" title="Crear" value="Crear Despachos" onclick=" location.href = '@Url.Action("Create", "Despachos")' " class="btn"/>
+</p>
+
+@{
+    var grid = new WebGrid(Model.Diccionario_Index.Values,
+        defaultSort: "Rank",
+        canSort: true,
+        rowsPerPage: 10
+        );
+}
+  
+<div style="width: 100%;">
+    @grid.GetHtml("webgrid", "webgrid-header", "webgrid-footer",
+        alternatingRowStyle: "webgrid-alternating-row",
+        selectedRowStyle: "webgrid-selected-row",
+        rowStyle: "webgrid-row-style",
+        columns: grid.Columns(
+            grid.Column("Dc", "Dc"),
+            grid.Column("Oficializacion", "Oficializacion", @<text>@item.Oficializacion.ToString("dd/MM/yyyy")</text>),
+            grid.Column("Fob_Total", "Fob Total"),
+            grid.Column("Flete_Total", "Flete Total"),
+            grid.Column("Seguro_Total", "Seguro Total"),
+            grid.Column("Cotizacion", "Cotizacion"),
+            grid.Column("Codigo_Afip", "Codigo Afip"),
+            grid.Column("Arancel_Sim", "Arancel Sim"),
+            grid.Column("Servicio_Guarda", "Servicio Guarda"),
+            grid.Column("Acciones", format: @<text>
+                                                 @Html.ActionLink("Editar", "Edit", new {id = item.Id})
+                                                 
+                                                 @Html.ActionLink("Eliminar", "Delete", new {id = item.Id}, new {onclick = "return confirm('¿Estas seguro de borrar el despacho?');"})
+                                             </text>)
+            )
+        )
+
+</div>

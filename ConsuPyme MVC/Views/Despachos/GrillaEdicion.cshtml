@@ -1,0 +1,59 @@
+﻿@{
+    var grid = new WebGrid(source: ViewBag.Facturas, rowsPerPage: 10, ajaxUpdateCallback: "actualizacion");
+}
+
+
+
+<script type="text/javascript">
+
+
+
+    function actualizacion(datos) {
+        $("#GridData").html(datos);
+        //  $(".field-validation-error").hide();
+    }
+
+    $(function () {
+        $(':radio').change(function () {
+            
+            debugger;
+            var id1 = $(this).val();
+            $.ajax({
+                url: '@Url.Action("Select")',
+                type: 'POST',
+                data: { isChecked: $(this).is(':checked'), id: id1 },
+                success: function (result) {
+                }
+            });
+        });
+    });
+</script>        
+<div id="formulario">
+
+    @Html.Label("Seleccione la/s factura/s")
+
+    @grid.GetHtml("webgrid", "webgrid-header", "webgrid-footer",
+        alternatingRowStyle: "webgrid-alternating-row",
+        selectedRowStyle: "webgrid-selected-row",
+        rowStyle: "webgrid-row-style",
+        columns:
+            grid.Columns(
+                grid.Column(null, null, @<input type="hidden" name="IDHidden"  id="IDHidden" value="@item.Id"/>),
+                grid.Column("Fecha de Embarque", format: @<text>@item.Flete.ToString("dd-MM-yyyy")</text>, canSort: false),
+                grid.Column("Envalaje", format: @<text>@item.Envalaje.ToString()</text>, canSort: false),
+                grid.Column("Nombre", format: @<text>@item.FacturasTotales.Nombre.ToString()</text>, canSort: false),
+                grid.Column("Numero Factura", format: @<text>@item.FacturasTotales.Numero_Factura.ToString()</text>, canSort: false),
+                grid.Column("Creacion", format: @<text>@item.FacturasTotales.Creacion.ToString("dd/MM/yyyy")</text>, canSort: false),
+                grid.Column("Vencimiento Factura", format: @<text>@item.FacturasTotales.Vencimiento_Factura.ToString("dd/MM/yyyy")</text>, canSort: false),
+
+
+                grid.Column("Seleccionar", format: item =>
+                {
+                    if (item.Visible)
+                    {
+                        return Html.Raw(string.Format("<input type=\"radio\" id=\"visible\" name=\"visible\"  value=\"{0}\" checked=\"checked\"  />", item.Id));
+                    }
+                    return Html.Raw(string.Format("<input type=\"radio\" id=\"visible\" name=\"visible\"  value=\"{0}\"  />", item.Id));
+                })), htmlAttributes: new {id = "@item.Id"})
+
+</div>

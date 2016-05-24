@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LeerDolar.ReportManager">
+    <Position X="2.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ReportManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeerDolar.GeneradorBase">
+    <Position X="4.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAIAAAIAAQAAAAAAAAICAAAAAAAQA=</HashCode>
+      <FileName>GeneradorBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LeerDolar.GeneradorXRates">
+    <Position X="7.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAgAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
+      <FileName>GeneradorXRates.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

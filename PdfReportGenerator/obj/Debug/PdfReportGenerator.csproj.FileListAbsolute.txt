@@ -1,0 +1,88 @@
+C:\Users\arx0000137\Desktop\Celina\PdfReportGenerator\bin\Debug\PdfReportGenerator.dll
+C:\Users\arx0000137\Desktop\Celina\PdfReportGenerator\bin\Debug\PdfReportGenerator.pdb
+C:\Users\arx0000137\Desktop\Celina\PdfReportGenerator\bin\Debug\itextsharp.dll
+C:\Users\arx0000137\Desktop\Celina\PdfReportGenerator\obj\Debug\PdfReportGenerator.csprojResolveAssemblyReference.cache
+C:\Users\arx0000137\Desktop\Celina\PdfReportGenerator\obj\Debug\PdfReportGenerator.dll
+C:\Users\arx0000137\Desktop\Celina\PdfReportGenerator\obj\Debug\PdfReportGenerator.pdb
+C:\CELINA 1\Celina\PdfReportGenerator\bin\Debug\PdfReportGenerator.dll
+C:\CELINA 1\Celina\PdfReportGenerator\bin\Debug\PdfReportGenerator.pdb
+C:\CELINA 1\Celina\PdfReportGenerator\bin\Debug\itextsharp.dll
+C:\CELINA 1\Celina\PdfReportGenerator\obj\Debug\PdfReportGenerator.dll
+C:\CELINA 1\Celina\PdfReportGenerator\obj\Debug\PdfReportGenerator.pdb
+C:\CELINA 1\Celina\PdfReportGenerator\obj\Debug\PdfReportGenerator.csprojResolveAssemblyReference.cache
+C:\CELINA 2\PdfReportGenerator\bin\Debug\PdfReportGenerator.dll
+C:\CELINA 2\PdfReportGenerator\bin\Debug\PdfReportGenerator.pdb
+C:\CELINA 2\PdfReportGenerator\bin\Debug\itextsharp.dll
+C:\CELINA 2\PdfReportGenerator\obj\Debug\PdfReportGenerator.csprojResolveAssemblyReference.cache
+C:\CELINA 2\PdfReportGenerator\obj\Debug\PdfReportGenerator.dll
+C:\CELINA 2\PdfReportGenerator\obj\Debug\PdfReportGenerator.pdb
+C:\Users\arx0000137\Desktop\ConsuPyme 1\PdfReportGenerator\bin\Debug\PdfReportGenerator.dll
+C:\Users\arx0000137\Desktop\ConsuPyme 1\PdfReportGenerator\bin\Debug\PdfReportGenerator.pdb
+C:\Users\arx0000137\Desktop\ConsuPyme 1\PdfReportGenerator\bin\Debug\itextsharp.dll
+C:\Users\arx0000137\Desktop\ConsuPyme 1\PdfReportGenerator\obj\Debug\PdfReportGenerator.csprojResolveAssemblyReference.cache
+C:\Users\arx0000137\Desktop\ConsuPyme 1\PdfReportGenerator\obj\Debug\PdfReportGenerator.dll
+C:\Users\arx0000137\Desktop\ConsuPyme 1\PdfReportGenerator\obj\Debug\PdfReportGenerator.pdb
+C:\CONSUPYME 1\PdfReportGenerator\bin\Debug\PdfReportGenerator.dll
+C:\CONSUPYME 1\PdfReportGenerator\bin\Debug\PdfReportGenerator.pdb
+C:\CONSUPYME 1\PdfReportGenerator\bin\Debug\itextsharp.dll
+C:\CONSUPYME 1\PdfReportGenerator\obj\Debug\PdfReportGenerator.dll
+C:\CONSUPYME 1\PdfReportGenerator\obj\Debug\PdfReportGenerator.pdb
+C:\Users\arx0000137\Desktop\CONSU PYME\PdfReportGenerator\bin\Debug\PdfReportGenerator.dll
+C:\Users\arx0000137\Desktop\CONSU PYME\PdfReportGenerator\bin\Debug\PdfReportGenerator.pdb
+C:\Users\arx0000137\Desktop\CONSU PYME\PdfReportGenerator\bin\Debug\itextsharp.dll
+C:\Users\arx0000137\Desktop\CONSU PYME\PdfReportGenerator\obj\Debug\PdfReportGenerator.dll
+C:\Users\arx0000137\Desktop\CONSU PYME\PdfReportGenerator\obj\Debug\PdfReportGenerator.pdb
+C:\CELINA\PdfReportGenerator\bin\Debug\PdfReportGenerator.dll
+C:\CELINA\PdfReportGenerator\bin\Debug\PdfReportGenerator.pdb
+C:\CELINA\PdfReportGenerator\bin\Debug\itextsharp.dll
+C:\CELINA\PdfReportGenerator\obj\Debug\PdfReportGenerator.dll
+C:\CELINA\PdfReportGenerator\obj\Debug\PdfReportGenerator.pdb
+C:\CELINA\PdfReportGenerator\obj\Debug\PdfReportGenerator.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\Desktop\CELINA\PdfReportGenerator\bin\Debug\PdfReportGenerator.dll
+C:\Users\Lucas\Desktop\CELINA\PdfReportGenerator\bin\Debug\PdfReportGenerator.pdb
+C:\Users\Lucas\Desktop\CELINA\PdfReportGenerator\bin\Debug\itextsharp.dll
+C:\Users\Lucas\Desktop\CELINA\PdfReportGenerator\obj\Debug\PdfReportGenerator.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\Desktop\CELINA\PdfReportGenerator\obj\Debug\PdfReportGenerator.dll
+C:\Users\Lucas\Desktop\CELINA\PdfReportGenerator\obj\Debug\PdfReportGenerator.pdb
+C:\Users\Lucas\Desktop\Ultimo\PdfReportGenerator\bin\Debug\PdfReportGenerator.dll
+C:\Users\Lucas\Desktop\Ultimo\PdfReportGenerator\bin\Debug\PdfReportGenerator.pdb
+C:\Users\Lucas\Desktop\Ultimo\PdfReportGenerator\bin\Debug\itextsharp.dll
+C:\Users\Lucas\Desktop\Ultimo\PdfReportGenerator\obj\Debug\PdfReportGenerator.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\Desktop\Ultimo\PdfReportGenerator\obj\Debug\PdfReportGenerator.dll
+C:\Users\Lucas\Desktop\Ultimo\PdfReportGenerator\obj\Debug\PdfReportGenerator.pdb
+C:\Users\arx0000137\Documents\CONSUPYME\PdfReportGenerator\bin\Debug\PdfReportGenerator.dll
+C:\Users\arx0000137\Documents\CONSUPYME\PdfReportGenerator\bin\Debug\PdfReportGenerator.pdb
+C:\Users\arx0000137\Documents\CONSUPYME\PdfReportGenerator\bin\Debug\itextsharp.dll
+C:\Users\arx0000137\Documents\CONSUPYME\PdfReportGenerator\obj\Debug\PdfReportGenerator.csprojResolveAssemblyReference.cache
+C:\Users\arx0000137\Documents\CONSUPYME\PdfReportGenerator\obj\Debug\PdfReportGenerator.dll
+C:\Users\arx0000137\Documents\CONSUPYME\PdfReportGenerator\obj\Debug\PdfReportGenerator.pdb
+C:\Users\Lucas\Desktop\CONSUPYME\PdfReportGenerator\bin\Debug\PdfReportGenerator.dll
+C:\Users\Lucas\Desktop\CONSUPYME\PdfReportGenerator\bin\Debug\PdfReportGenerator.pdb
+C:\Users\Lucas\Desktop\CONSUPYME\PdfReportGenerator\bin\Debug\itextsharp.dll
+C:\Users\Lucas\Desktop\CONSUPYME\PdfReportGenerator\obj\Debug\PdfReportGenerator.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\Desktop\CONSUPYME\PdfReportGenerator\obj\Debug\PdfReportGenerator.dll
+C:\Users\Lucas\Desktop\CONSUPYME\PdfReportGenerator\obj\Debug\PdfReportGenerator.pdb
+C:\Users\Lucas\Desktop\POSTA\PdfReportGenerator\bin\Debug\PdfReportGenerator.dll
+C:\Users\Lucas\Desktop\POSTA\PdfReportGenerator\bin\Debug\PdfReportGenerator.pdb
+C:\Users\Lucas\Desktop\POSTA\PdfReportGenerator\bin\Debug\itextsharp.dll
+C:\Users\Lucas\Desktop\POSTA\PdfReportGenerator\obj\Debug\PdfReportGenerator.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\Desktop\POSTA\PdfReportGenerator\obj\Debug\PdfReportGenerator.dll
+C:\Users\Lucas\Desktop\POSTA\PdfReportGenerator\obj\Debug\PdfReportGenerator.pdb
+C:\Users\arx0000137\Documents\POSTA\PdfReportGenerator\bin\Debug\PdfReportGenerator.dll
+C:\Users\arx0000137\Documents\POSTA\PdfReportGenerator\bin\Debug\PdfReportGenerator.pdb
+C:\Users\arx0000137\Documents\POSTA\PdfReportGenerator\bin\Debug\itextsharp.dll
+C:\Users\arx0000137\Documents\POSTA\PdfReportGenerator\obj\Debug\PdfReportGenerator.csprojResolveAssemblyReference.cache
+C:\Users\arx0000137\Documents\POSTA\PdfReportGenerator\obj\Debug\PdfReportGenerator.dll
+C:\Users\arx0000137\Documents\POSTA\PdfReportGenerator\obj\Debug\PdfReportGenerator.pdb
+C:\Users\Lucas\Desktop\Posta1\PdfReportGenerator\bin\Debug\PdfReportGenerator.dll
+C:\Users\Lucas\Desktop\Posta1\PdfReportGenerator\bin\Debug\PdfReportGenerator.pdb
+C:\Users\Lucas\Desktop\Posta1\PdfReportGenerator\bin\Debug\itextsharp.dll
+C:\Users\Lucas\Desktop\Posta1\PdfReportGenerator\obj\Debug\PdfReportGenerator.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\Desktop\Posta1\PdfReportGenerator\obj\Debug\PdfReportGenerator.dll
+C:\Users\Lucas\Desktop\Posta1\PdfReportGenerator\obj\Debug\PdfReportGenerator.pdb
+C:\01 ARCHIVOS ESCRITORIO\Posta1\PdfReportGenerator\bin\Debug\PdfReportGenerator.dll
+C:\01 ARCHIVOS ESCRITORIO\Posta1\PdfReportGenerator\bin\Debug\PdfReportGenerator.pdb
+C:\01 ARCHIVOS ESCRITORIO\Posta1\PdfReportGenerator\bin\Debug\itextsharp.dll
+C:\01 ARCHIVOS ESCRITORIO\Posta1\PdfReportGenerator\obj\Debug\PdfReportGenerator.csprojResolveAssemblyReference.cache
+C:\01 ARCHIVOS ESCRITORIO\Posta1\PdfReportGenerator\obj\Debug\PdfReportGenerator.dll
+C:\01 ARCHIVOS ESCRITORIO\Posta1\PdfReportGenerator\obj\Debug\PdfReportGenerator.pdb

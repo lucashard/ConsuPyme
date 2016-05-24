@@ -1,0 +1,25 @@
+FACTURAS
+
+PONER CALENDARIOS
+PONER BUSCADOR DE ARTICULOS	//FALTA
+
+EN FACTURAS INTRODUSCO EL PRECIO UNITARIO DE CADA PRODUCTO Y LA CANTIDAD y NUMERO DE LOTE SI ES QUE ESTA!!! ES CON FK NULL
+
+CUando creas la factura tenes q ver el total antes de guardar la factura	//FALTA
+
+PRODUCTO
+y borrar cantidad y precio en el producto,
+
+ Y TENGO QUE TENER UN BUSCADOR DE POSICIONES ARANCELARIAS, NO COMBO	//FALTA
+
+POSCICION ARANCELARIA
+
+campos:
+numero de la poscion arancelaria,
+portual de derecho de importacion,
+porcentual de taza estadistica
+porcentual iva
+
+LOS GASTOS DE DESPACHANTE Y EL ACARREO ESTAN EN PESOS PASARLOS A DOLARES
+
+EN DESPACHO NO MUESTRO PRODUCTOS

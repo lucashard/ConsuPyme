@@ -1,0 +1,61 @@
+<div style="width: 50%;">
+<table class="table-striped" id="tabla">
+    <tr>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Numero_Factura
+        </th>
+        <th>
+            Importe
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.Diccionario.Values) {
+             <tr>
+                 <td>
+                     @Html.Label(item.Nombre)
+                 </td>
+                 <td>
+                     @Html.Label(item.Numero_Factura.ToString())
+                 </td>
+                 <td>
+                     @Html.Label(item.Importe.ToString())
+                 </td>
+                 <td>
+                     @Html.ActionLink("Editar", "Edit", new {id = item.Id}) |
+                     @Html.ActionLink("Borrar", "Delete", new {id = item.Nombre}, new {onclick = "return confirm('¿Estas seguro de borrar el acarreo?');"})
+                 </td>
+             </tr>
+         
+    }
+
+</table>
+</div>
+
+@{
+    var grid = new WebGrid(source: Model,
+        defaultSort: "Rank",
+        canSort: true,
+        rowsPerPage: 1
+       );
+}
+<div style="width: 60%;">
+    @grid.GetHtml(
+        tableStyle: "grid",
+        headerStyle: "head",
+        alternatingRowStyle: "alt",
+        columns: grid.Columns(
+                            grid.Column("Codigo", "Codigo"),
+                            grid.Column("Descripcion", "Descripcion"),
+                                            grid.Column("Posicion_Arancelaria_Id", "Posicion Arancelaria"),
+                    grid.Column("Acciones", format: @<text>
+    @Html.ActionLink("Editar", "Edit", new { id = item.Id })
+    |
+    @Html.ActionLink("Eliminar", "Delete", new { id = item.Id })
+    </text>)
+            )
+        )
+</div>

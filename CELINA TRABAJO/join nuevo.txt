@@ -1,0 +1,34 @@
+ join despa in datos.Despacho on obj.DespachoId equals despa.Id
+                join facturaDespacho in datos.Factura_Despacho on despa.Id equals facturaDespacho.DespachoId
+                join factura in datos.Factura on facturaDespacho.FacturaId equals factura.Id
+                join facturaTotal in datos.Factura_Total on factura.Factura_Total_Id equals facturaTotal.Id
+                join facturaTotalProducto in datos.Factura_Total_Producto on facturaTotal.Id equals facturaTotalProducto.Factura_TotalId
+                join producto in datos.Producto on facturaTotalProducto.ProductoId equals producto.Id
+				
+				$(".webgrid").each(function() {
+            
+                debugger;
+                var chk = $(this).find(":checkbox").is(':checked');
+                //var chk = $(this).is(':checked');
+                if (chk == true) {
+                    var fields = $(this).find(":text");
+                    var field1 = $(this).find(":hidden");
+                    var lote = fields.eq(0).val();
+                    var IDHidden = field1.eq(0).val();
+                    var precio = fields.eq(1).val();
+                    var cantidad = fields.eq(2).val();
+                    var articulos = {
+                        id: IDHidden,
+                        lote: lote,
+                        precio: precio,
+                        cantidad: cantidad
+                    };
+
+                    myData.push(articulos);
+                }
+            });
+			
+Object {id: "1", lote: "1", precio: "2", cantidad: "3"}
+
+id:id,lote:lote,precio:precio,cantidad:cantidad,
+public ActionResult Select(bool isChecked,int id,String lote,String precio,String cantidad, Grilla Grilla1)

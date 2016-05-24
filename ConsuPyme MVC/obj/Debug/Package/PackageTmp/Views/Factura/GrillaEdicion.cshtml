@@ -1,0 +1,200 @@
+﻿@model ConsuPyme_MVC.Models.Facturas
+@{
+    var grid = new WebGrid(source: ViewBag.productos, rowsPerPage: 10, ajaxUpdateCallback: "actualizacion");
+}
+
+
+
+@*
+<link href="@Url.Content("~/Content/layout.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css"/>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"> </script>
+<script src="@Url.Content("~/Scripts/jquery.unobtrusive-ajax.min.js")" type="text/javascript"></script>*@
+@*<script src="@Url.Content("~/Scripts/jquery-2.0.2.min.js")" type="text/javascript"> </script>*@
+<script type="text/javascript">
+
+    function actualizacion(datos) {
+        debugger;
+        $("#GridData").html(datos);
+    }
+
+    $(document).ready(function() {
+
+     $(".cant").blur(function() {
+            verificar(this);
+        });
+
+        function verificar(e) {
+        
+            var tr = $(e).parents('tr:first');
+            var cantidad = tr.find("#cantidad").val();
+            var precio = tr.find("#Precio_Unitario").val();
+            var lote = tr.find("#nlote").val();
+            var id = tr.find("#visible").val();
+            var visible = tr.find('input[name="visible1"]:checked').length > 0;
+            debugger;
+            if (precio != "" && cantidad != "") {
+                
+                var tot = parseFloat(precio) * parseInt(cantidad);
+                if (isNumeric(tot)) {
+                    tr.find("#total").val(tot.toString());
+                  //  if (visible) {
+                        $.ajax({
+                            url: '@Url.Action("CambioGrila")',
+                            type: 'POST',
+                            data: { id: id, lote: lote, precio: precio, cantidad: cantidad },
+                            success: function(result) {
+                             //$("#resultado").replaceWith("El total es:" + result);
+                             tr.find("#total").val(result);
+                            }
+                        });
+                    //}
+                } else {
+                    tr.find("#total").val('');
+                }
+            }
+        }
+          function isNumeric(n) {
+            return !isNaN(parseFloat(n)) && isFinite(n);
+        }
+
+        $("a").on('click', function(event) {
+            debugger;
+            event.preventDefault();
+            var href = $(this).attr("href");
+            var pagina1 = href.indexOf("page=") + 5;
+            var pagina = href.substring(pagina1, href.length);
+            $.ajax({
+                type: "GET",
+                url: "@Url.Action("Edit", "Factura")",
+                async: false,
+                data: { id: 2, page: pagina },
+                success: function(result) {
+                    $("#GridData").html(result);
+                }
+            });
+
+        });
+    });
+
+    debugger;
+    $(function() {
+        $(':checkbox').change(function() {
+            debugger;
+
+            var chequeado = $(this).is(':checked');
+            var id = $(this).val();
+            var myData = new Array();
+            var lote, precio, cantidad, gr;
+            $('.webgrid').find('tr').each(function() {
+                var row = $(this);
+
+                if (row.find('input[type="checkbox"]')) {
+
+                    var fields = row.find(":text");
+                    var field1 = row.find(":hidden");
+                    var IDHidden = field1.eq(0).val();
+                    if (IDHidden == id) {
+
+                        lote = fields.eq(0).val();
+                        precio = fields.eq(1).val();
+                        cantidad = fields.eq(2).val();
+                        var mensaje = '';
+
+
+                        if (chequeado) {
+                            debugger;
+
+                            if (!$.isNumeric(parseInt(cantidad)) || !($.isNumeric(parseFloat(cantidad)))) {
+                                mensaje += "Cantidad no es un numero" + "\n";
+                            }
+
+                            if (!$.isNumeric(parseInt(precio)) || !($.isNumeric(parseFloat(precio)))) {
+                                mensaje += "Precio no es un numero";
+                            }
+                        }
+
+                        if (mensaje != '') {
+                            alert(mensaje);
+                            fields.eq(0).val('');
+                            fields.eq(1).val('');
+                            fields.eq(2).val('');
+                            row.find(":checkbox").removeAttr('checked');
+                        } else {
+                            debugger;
+                            var Grilla1 = {
+                                id: id,
+                                lote: lote,
+                                precio: precio,
+                                cantidad: cantidad,
+                                facturaId: 1
+                            };
+                            $.ajax({
+                                url: '@Url.Action("Select")',
+                                type: 'POST',
+                                async: false,
+                                data: { isChecked: chequeado, id: id, lote: lote, precio: precio, cantidad: cantidad, grilla: Grilla1 },
+                                success: function(result) {
+                                    $("#resultado").html("El total es:" + result);
+                                }
+                            });
+                            myData.push(articulos);
+                        }
+                    }
+                }
+            });
+        });
+    });
+</script>
+
+@*@using (Html.BeginForm("Edit", "Factura", method: FormMethod.Get))
+   {*@
+
+@grid.GetHtml("webgrid", "webgrid-header", "webgrid-footer",
+    alternatingRowStyle: "webgrid-alternating-row",
+    selectedRowStyle: "webgrid-selected-row",
+    rowStyle: "webgrid-row-style",
+    columns:
+        grid.Columns(
+            grid.Column(null, null, @<input type="hidden" name="IDHidden" id="IDHidden" value="@item.productos.Id"/>),
+            grid.Column("Codigo", format: @<text>@item.productos.Codigo.ToString()</text>, canSort: false),
+            grid.Column("Descripcion", format: @<text>@item.productos.Descripcion.ToString()</text>, canSort: false),
+            grid.Column("Num_Lote", "Num_Lote", canSort: false, format: @<input type="text" id="nlote" value="@item.Num_Lote"/>),
+            grid.Column("Precio Unitario", format: item =>
+            {
+                if (item.cantidad == 0)
+                {
+                    return Html.Raw(string.Format("<input type=\"text\" id=\"Precio_Unitario\"  class=\"cant\" value=\"\" />"));
+                }
+                return Html.Raw(string.Format("<input type=\"text\" id=\"Precio_Unitario\" class=\"cant\" value={0} />", item.Precio_Unitario));
+            }),
+            grid.Column("Cantidad", format: item =>
+            {
+                if (item.cantidad == 0)
+                {
+                    return Html.Raw(string.Format("<input type=\"text\" class=\"cant\" id=\"cantidad\" value=\"\" />"));
+                }
+                return Html.Raw(string.Format("<input type=\"text\" class=\"cant\" id=\"cantidad\"  value={0} />", item.cantidad));
+            }
+                ),
+            grid.Column("Total", format: item =>
+            {
+                if (item.Total == 0)
+                {
+                    return Html.Raw(string.Format("<input type=\"text\" id=\"total\"  name=\"cantidad\" value=\"\" />"));
+                }
+                return Html.Raw(string.Format("<input type=\"text\" id=\"total\"  name=\"cantidad\" value={0} />", item.Total.ToString()));
+            }
+                ),
+            grid.Column("Seleccionar", format: item =>
+            {
+                if (item.productos.Visible)
+                {
+                    return Html.Raw(string.Format("<input type=\"checkbox\" id=\"visible\"    value=\"{0}\" checked=\"checked\"  />", item.productos.Id));
+                }
+                return Html.Raw(string.Format("<input type=\"checkbox\" id=\"visible\" value=\"{0}\" />", item.productos.Id));
+            })), htmlAttributes: new {id = "@item.productos.Id"})
+
+
+@*   }*@

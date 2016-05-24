@@ -1,0 +1,45 @@
+﻿@model ConsuPyme_MVC.Models.Facturas
+
+@{
+    ViewBag.Title = "Index";
+    Layout = null;
+}
+<a href="http://apycom.com/"></a>
+<head>
+    <link href="@Url.Content("~/Content/layout.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+</head>
+<h2>Listado de Factura</h2>
+
+
+<p>
+    <input type="button" title="Crear" value="Crear Factura" onclick=" location.href = '@Url.Action("Create", "Factura")' " class="btn"/>
+</p>
+@{
+    var grid = new WebGrid(Model.Diccionario.Values,
+        defaultSort: "Rank",
+        canSort: true,
+        rowsPerPage: 10
+        );
+}
+  
+<div style="width: 100%;">
+    @grid.GetHtml("webgrid", "webgrid-header", "webgrid-footer",
+        alternatingRowStyle: "webgrid-alternating-row",
+        selectedRowStyle: "webgrid-selected-row",
+        rowStyle: "webgrid-row-style",
+        columns: grid.Columns(
+            grid.Column("FacturasTotales.Numero_Factura", "Numero de Factura"),
+                                    grid.Column("FacturasTotales.Vencimiento_Factura", "Vencimiento de Factura", @<text>@item.FacturasTotales.Vencimiento_Factura.ToString("dd/MM/yyyy")</text>),
+                                            grid.Column("FacturasTotales.Nombre", "Nombre"),
+                                            grid.Column("FacturasTotales.Creacion", "Creacion", @<text>@item.FacturasTotales.Creacion.ToString("dd/MM/yyyy")</text>),
+                            //grid.Column("FacturasTotales.Total", "Total"),
+                            grid.Column("Acciones", format: @<text>
+                                                 @Html.ActionLink("Editar", "Edit", new { id = item.Id })
+                                                 |
+                                                 @Html.ActionLink("Eliminar", "Delete", new { id = item.Id}, new { onclick = "return confirm('¿Estas seguro de borrar la factura?');" })
+                                             </text>)
+                                                                 )
+        )
+
+</div>

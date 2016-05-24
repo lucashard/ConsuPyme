@@ -1,0 +1,87 @@
+﻿@model ConsuPyme_MVC.Models.Despachantes
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<a href="http://apycom.com/"></a>
+<head>
+<link href="@Url.Content("~/Content/layout.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+</head>
+<h2>Listado Despachante</h2>
+<p>
+    <input type="button" title="Crear" value="Crear Despachante" onclick="location.href='@Url.Action("Create", "Despacho")'" class="btn"/>
+</p>
+<div style="width: 50%;">
+<table class="table-striped" id="tabla">
+    <tr>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Numero_Factura
+        </th>
+ @*       <th>
+            Total
+        </th>*@
+        <th>
+            Ley
+        </th>
+        <th>
+            Djai
+        </th>
+        <th>
+            AD_Sim
+        </th>
+        <th>
+            Gastos_Despachos
+        </th>
+        <th>
+            Desconsolidado
+        </th>
+        <th>
+            Servicios
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.lista_productos.Values) {
+    <tr>
+        <td>
+            @Html.Label(item.Nombre)
+        </td>
+        <td>
+            @Html.Label(item.Numero_Factura.ToString())
+        </td>
+      @*  <td>
+            @Html.Label(item.Total.ToString())
+        </td>*@
+        <td>
+            @Html.Label(item.Ley.ToString())
+        </td>
+        <td>
+            @Html.Label(item.Djai.ToString())
+        </td>
+        <td>
+            @Html.Label(item.AD_Sim.ToString())
+        </td>
+        <td>
+            @Html.Label(item.Gastos_Despacho.ToString())
+        </td>
+        <td>
+            @Html.Label(item.Desconsolidado.ToString())
+        </td>
+        <td>
+            @Html.Label(item.Servicios.ToString())
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.Nombre },new { onclick = "return confirm('¿Estas seguro de borrar el despachante?');" })
+        </td>
+    </tr>
+}
+
+</table>
+    
+</div>

@@ -1,0 +1,100 @@
+﻿@model ConsuPyme_MVC.Models.Despachos
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<a href="http://apycom.com/"></a>
+<head>
+<link href="@Url.Content("~/Content/layout.css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+</head>
+<h2>Listado Despachos</h2>
+
+<p>
+    <input type="button" title="Crear" value="Crear Despachos" onclick="location.href='@Url.Action("Create", "Despachos")'" class="btn"/>
+</p>
+<div style="width: 70%;">
+<table class="table-striped" id="tabla">
+    <tr>
+        <th>
+            Costo_despacho_producto
+        </th>
+        @*  <th>
+            Producto_Id
+        </th>*@
+        <th>
+            Dc
+        </th>
+        <th>
+            Oficializacion
+        </th>
+        <th>
+            Fob_Total
+        </th>
+        <th>
+            Flete_Total
+        </th>
+        <th>
+            Seguro_Total
+        </th>
+        <th>
+            Cotizacion
+        </th>
+        <th>
+            Codigo_Afip
+        </th>
+        <th>
+            Arancel_Sim
+        </th>
+        <th>
+            Servicio_Guarda
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model.Diccionario_Index.Values) {
+        <tr>
+            <td>
+                @Html.Label(item.Costo_despacho_producto.ToString())
+            </td>
+            @*<td>
+            @Html.Label(item.Producto_Id)
+        </td>*@
+            <td>
+                @Html.Label(item.Dc)
+            </td>
+            <td>
+                @Html.Label(item.Oficializacion.ToString())
+            </td>
+            <td>
+                @Html.Label(item.Fob_Total.ToString())
+            </td>
+            <td>
+                @Html.Label(item.Flete_Total.ToString())
+            </td>
+            <td>
+                @Html.Label(item.Seguro_Total.ToString())
+            </td>
+            <td>
+                @Html.Label(item.Cotizacion.ToString())
+            </td>
+            <td>
+                @Html.Label(item.Codigo_Afip)
+            </td>
+            <td>
+                @Html.Label(item.Arancel_Sim.ToString())
+            </td>
+            <td>
+                @Html.Label(item.Servicio_Guarda.ToString())
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
+                @*@Html.ActionLink("Details", "Details", new { id=item.Id }) |*@
+                @Html.ActionLink("Borrar", "Delete", new { id = item.Dc }, new { onclick = "return confirm('¿Estas seguro de borrar el despacho?');" })
+            </td>
+        </tr>
+    }
+
+</table>
+</div>

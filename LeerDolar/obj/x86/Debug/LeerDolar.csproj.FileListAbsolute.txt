@@ -1,0 +1,14 @@
+c:\users\lucas\documents\visual studio 2010\Projects\Composite\LeerDolar\bin\Debug\LeerDolar.exe
+c:\users\lucas\documents\visual studio 2010\Projects\Composite\LeerDolar\bin\Debug\LeerDolar.pdb
+c:\users\lucas\documents\visual studio 2010\Projects\Composite\LeerDolar\obj\x86\Debug\LeerDolar.exe
+c:\users\lucas\documents\visual studio 2010\Projects\Composite\LeerDolar\obj\x86\Debug\LeerDolar.pdb
+C:\01 ARCHIVOS ESCRITORIO\Posta1\LeerDolar\bin\Debug\LeerDolar.dll
+C:\01 ARCHIVOS ESCRITORIO\Posta1\LeerDolar\bin\Debug\LeerDolar.pdb
+C:\01 ARCHIVOS ESCRITORIO\Posta1\LeerDolar\obj\x86\Debug\LeerDolar.csprojResolveAssemblyReference.cache
+C:\01 ARCHIVOS ESCRITORIO\Posta1\LeerDolar\obj\x86\Debug\LeerDolar.dll
+C:\01 ARCHIVOS ESCRITORIO\Posta1\LeerDolar\obj\x86\Debug\LeerDolar.pdb
+C:\Users\Lucas\Desktop\Posta1\LeerDolar\bin\Debug\LeerDolar.dll
+C:\Users\Lucas\Desktop\Posta1\LeerDolar\bin\Debug\LeerDolar.pdb
+C:\Users\Lucas\Desktop\Posta1\LeerDolar\obj\x86\Debug\LeerDolar.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\Desktop\Posta1\LeerDolar\obj\x86\Debug\LeerDolar.dll
+C:\Users\Lucas\Desktop\Posta1\LeerDolar\obj\x86\Debug\LeerDolar.pdb

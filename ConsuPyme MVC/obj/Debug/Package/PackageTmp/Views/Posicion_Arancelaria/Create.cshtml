@@ -1,0 +1,67 @@
+﻿    @model ConsuPyme_MVC.Models.Posicion_arancelaria
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Crear Posicion Arancelaria</h2>
+   <link href="@Url.Content("~/Content/layout.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+<script type="text/javascript">
+    function prueba() {
+        alert("hola");
+    }
+</script>
+
+@using (Html.BeginForm()) {
+    
+@*    <fieldset>
+        <legend>Posicion_Arancelaria</legend>*@
+
+        <div class="editor-label">
+            @Html.Label("Numero Posicion")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Numero_Posicion)
+            @Html.ValidationMessageFor(model => model.Numero_Posicion)
+        </div>
+
+        <div class="editor-label">
+            @Html.Label("Porcentaje de Importacion")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Porcentaje_Importacion)
+            @Html.ValidationMessageFor(model => model.Porcentaje_Importacion)
+        </div>
+        
+        <div class="editor-label">
+            @Html.Label("Porcentaje de Iva")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Porcentaje_Iva)
+            @Html.ValidationMessageFor(model => model.Porcentaje_Importacion)
+        </div>
+        
+        <div class="editor-label">
+            @Html.Label("Porcentaje de Taza  Estadistica")
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Porcentaje_Taza_Estadistica)
+            @Html.ValidationMessageFor(model => model.Porcentaje_Taza_Estadistica)
+        </div>
+        
+        
+        <p>
+            <input type="submit" value="Crear" />
+        </p>
+    @*</fieldset>*@
+}
+
+@*<button onclick="prueba();">PruebaS</button>*@
+
+
+<div>
+    @Html.ActionLink("Volver", "Index")
+</div>

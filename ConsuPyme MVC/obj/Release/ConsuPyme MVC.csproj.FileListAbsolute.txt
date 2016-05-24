@@ -1,0 +1,143 @@
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\ConsuPyme MVC.dll
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\ConsuPyme MVC.pdb
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\EntityFramework.dll
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\Ninject.dll
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\Ninject.Web.Common.dll
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\Ninject.Web.Mvc.dll
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\PagedList.dll
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\System.Web.Helpers.dll
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\System.Web.Mvc.dll
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\System.Web.Providers.dll
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\System.Web.Razor.dll
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\System.Web.WebPages.dll
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\System.Web.WebPages.Razor.dll
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\WebActivator.dll
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\Ninject.pdb
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\Ninject.xml
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\Ninject.Web.Common.pdb
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\Ninject.Web.Common.xml
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\Ninject.Web.Mvc.pdb
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\Ninject.Web.Mvc.xml
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\PagedList.xml
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\EntityFramework.xml
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\obj\Release\ConsuPyme MVC.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\obj\Release\ConsuPyme MVC.dll
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\obj\Release\ConsuPyme MVC.pdb
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\WebGridMvc.dll
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\es\Microsoft.Web.Infrastructure.resources.dll
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\es\System.Web.Razor.resources.dll
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Lucas\Documents\Visual Studio 2012\Projects\ConsuPyme MVC\ConsuPyme MVC\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\ConsuPyme MVC.dll
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\ConsuPyme MVC.pdb
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\EntityFramework.dll
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\Ninject.dll
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\Ninject.Web.Common.dll
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\Ninject.Web.Mvc.dll
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\PagedList.dll
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\System.Web.Helpers.dll
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\System.Web.Mvc.dll
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\System.Web.Providers.dll
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\System.Web.Razor.dll
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\System.Web.WebPages.dll
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\System.Web.WebPages.Razor.dll
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\WebActivator.dll
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\WebGridMvc.dll
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\Ninject.pdb
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\Ninject.xml
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\Ninject.Web.Common.pdb
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\Ninject.Web.Common.xml
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\Ninject.Web.Mvc.pdb
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\Ninject.Web.Mvc.xml
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\PagedList.xml
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\EntityFramework.xml
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\es\Microsoft.Web.Infrastructure.resources.dll
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\es\System.Web.Razor.resources.dll
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\obj\Release\ConsuPyme MVC.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\obj\Release\ConsuPyme MVC.dll
+C:\Users\Lucas\Desktop\ConsuPyme MVC\ConsuPyme MVC\obj\Release\ConsuPyme MVC.pdb
+C:\CONSUPYME\ConsuPyme MVC\bin\ConsuPyme MVC.dll
+C:\CONSUPYME\ConsuPyme MVC\bin\ConsuPyme MVC.pdb
+C:\CONSUPYME\ConsuPyme MVC\bin\EntityFramework.dll
+C:\CONSUPYME\ConsuPyme MVC\bin\Microsoft.Web.Infrastructure.dll
+C:\CONSUPYME\ConsuPyme MVC\bin\Ninject.dll
+C:\CONSUPYME\ConsuPyme MVC\bin\Ninject.Web.Common.dll
+C:\CONSUPYME\ConsuPyme MVC\bin\Ninject.Web.Mvc.dll
+C:\CONSUPYME\ConsuPyme MVC\bin\PagedList.dll
+C:\CONSUPYME\ConsuPyme MVC\bin\System.Web.Helpers.dll
+C:\CONSUPYME\ConsuPyme MVC\bin\System.Web.Mvc.dll
+C:\CONSUPYME\ConsuPyme MVC\bin\System.Web.Providers.dll
+C:\CONSUPYME\ConsuPyme MVC\bin\System.Web.Razor.dll
+C:\CONSUPYME\ConsuPyme MVC\bin\System.Web.WebPages.Deployment.dll
+C:\CONSUPYME\ConsuPyme MVC\bin\System.Web.WebPages.dll
+C:\CONSUPYME\ConsuPyme MVC\bin\System.Web.WebPages.Razor.dll
+C:\CONSUPYME\ConsuPyme MVC\bin\WebActivator.dll
+C:\CONSUPYME\ConsuPyme MVC\bin\WebGridMvc.dll
+C:\CONSUPYME\ConsuPyme MVC\bin\Ninject.pdb
+C:\CONSUPYME\ConsuPyme MVC\bin\Ninject.xml
+C:\CONSUPYME\ConsuPyme MVC\bin\Ninject.Web.Common.pdb
+C:\CONSUPYME\ConsuPyme MVC\bin\Ninject.Web.Common.xml
+C:\CONSUPYME\ConsuPyme MVC\bin\Ninject.Web.Mvc.pdb
+C:\CONSUPYME\ConsuPyme MVC\bin\Ninject.Web.Mvc.xml
+C:\CONSUPYME\ConsuPyme MVC\bin\PagedList.xml
+C:\CONSUPYME\ConsuPyme MVC\bin\EntityFramework.xml
+C:\CONSUPYME\ConsuPyme MVC\bin\es\Microsoft.Web.Infrastructure.resources.dll
+C:\CONSUPYME\ConsuPyme MVC\bin\es\System.Web.Helpers.resources.dll
+C:\CONSUPYME\ConsuPyme MVC\bin\es\System.Web.Mvc.resources.dll
+C:\CONSUPYME\ConsuPyme MVC\bin\es\System.Web.Razor.resources.dll
+C:\CONSUPYME\ConsuPyme MVC\bin\es\System.Web.WebPages.resources.dll
+C:\CONSUPYME\ConsuPyme MVC\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\CONSUPYME\ConsuPyme MVC\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\CONSUPYME\ConsuPyme MVC\obj\Release\ConsuPyme MVC.csprojResolveAssemblyReference.cache
+C:\CONSUPYME\ConsuPyme MVC\obj\Release\ConsuPyme MVC.dll
+C:\CONSUPYME\ConsuPyme MVC\obj\Release\ConsuPyme MVC.pdb
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\ConsuPyme MVC.dll
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\ConsuPyme MVC.pdb
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\EntityFramework.dll
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\Ninject.dll
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\Ninject.Web.Common.dll
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\Ninject.Web.Mvc.dll
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\PagedList.dll
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\PdfReportGenerator.dll
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\System.Web.Helpers.dll
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\System.Web.Mvc.dll
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\System.Web.Providers.dll
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\System.Web.Razor.dll
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\System.Web.WebPages.Deployment.dll
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\System.Web.WebPages.dll
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\System.Web.WebPages.Razor.dll
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\WebActivator.dll
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\WebGridMvc.dll
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\itextsharp.dll
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\PdfReportGenerator.pdb
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\Ninject.pdb
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\Ninject.xml
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\Ninject.Web.Common.pdb
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\Ninject.Web.Common.xml
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\Ninject.Web.Mvc.pdb
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\Ninject.Web.Mvc.xml
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\PagedList.xml
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\EntityFramework.xml
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\es\Microsoft.Web.Infrastructure.resources.dll
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\es\System.Web.Helpers.resources.dll
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\es\System.Web.Mvc.resources.dll
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\es\System.Web.Razor.resources.dll
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\es\System.Web.WebPages.resources.dll
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\obj\Release\ConsuPyme MVC.csprojResolveAssemblyReference.cache
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\obj\Release\ConsuPyme MVC.dll
+C:\Users\arx0000137\Documents\CONSUPYME\ConsuPyme MVC\obj\Release\ConsuPyme MVC.pdb

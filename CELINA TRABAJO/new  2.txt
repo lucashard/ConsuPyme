@@ -1,0 +1,45 @@
+FACTURA
+NO RETORNA EL INDEX AL CREAR LA FACTURA
+
+Generar despacho
+<div style="width: 50%;">
+        <table class="table-striped" id="tabla">
+            <tr>
+                <th>
+                    Codigo
+                </th>
+                <th>
+                    Descripcion
+                </th>
+                <th>
+                    Num_Lote
+                </th>
+                <th>
+                    Precio_Unitario
+                </th>
+                <th>Seleccionar</th>
+            </tr>
+
+            @foreach (var item in ViewBag.Productos as List<ConsuPyme_MVC.Models.Productos>)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Codigo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Descripcion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Num_Lote)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Precio_Unitario)
+                    </td>
+                    <td>
+                    @*    @*@Html.CheckBoxFor(modelItem => item.Visible)*@
+                        <input type="checkbox" name="visible" value="@item.Id" />*@
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
