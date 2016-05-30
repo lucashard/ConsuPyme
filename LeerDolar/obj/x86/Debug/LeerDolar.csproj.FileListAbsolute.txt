@@ -12,3 +12,8 @@ C:\Users\Lucas\Desktop\Posta1\LeerDolar\bin\Debug\LeerDolar.pdb
 C:\Users\Lucas\Desktop\Posta1\LeerDolar\obj\x86\Debug\LeerDolar.csprojResolveAssemblyReference.cache
 C:\Users\Lucas\Desktop\Posta1\LeerDolar\obj\x86\Debug\LeerDolar.dll
 C:\Users\Lucas\Desktop\Posta1\LeerDolar\obj\x86\Debug\LeerDolar.pdb
+C:\Users\Lucas\Desktop\git\ConsuPyme\LeerDolar\bin\Debug\LeerDolar.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\LeerDolar\bin\Debug\LeerDolar.pdb
+C:\Users\Lucas\Desktop\git\ConsuPyme\LeerDolar\obj\x86\Debug\LeerDolar.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\Desktop\git\ConsuPyme\LeerDolar\obj\x86\Debug\LeerDolar.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\LeerDolar\obj\x86\Debug\LeerDolar.pdb

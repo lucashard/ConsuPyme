@@ -86,3 +86,9 @@ C:\01 ARCHIVOS ESCRITORIO\Posta1\PdfReportGenerator\bin\Debug\itextsharp.dll
 C:\01 ARCHIVOS ESCRITORIO\Posta1\PdfReportGenerator\obj\Debug\PdfReportGenerator.csprojResolveAssemblyReference.cache
 C:\01 ARCHIVOS ESCRITORIO\Posta1\PdfReportGenerator\obj\Debug\PdfReportGenerator.dll
 C:\01 ARCHIVOS ESCRITORIO\Posta1\PdfReportGenerator\obj\Debug\PdfReportGenerator.pdb
+C:\Users\Lucas\Desktop\git\ConsuPyme\PdfReportGenerator\bin\Debug\PdfReportGenerator.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\PdfReportGenerator\bin\Debug\PdfReportGenerator.pdb
+C:\Users\Lucas\Desktop\git\ConsuPyme\PdfReportGenerator\bin\Debug\itextsharp.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\PdfReportGenerator\obj\Debug\PdfReportGenerator.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\Desktop\git\ConsuPyme\PdfReportGenerator\obj\Debug\PdfReportGenerator.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\PdfReportGenerator\obj\Debug\PdfReportGenerator.pdb
