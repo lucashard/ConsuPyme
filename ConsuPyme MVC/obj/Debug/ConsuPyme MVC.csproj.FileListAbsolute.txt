@@ -718,3 +718,43 @@ C:\01 ARCHIVOS ESCRITORIO\Posta1\ConsuPyme MVC\obj\Debug\ConsuPyme MVC.dll
 C:\01 ARCHIVOS ESCRITORIO\Posta1\ConsuPyme MVC\obj\Debug\ConsuPyme MVC.pdb
 C:\Users\Lucas\Desktop\Posta1\ConsuPyme MVC\bin\LeerDolar.dll
 C:\Users\Lucas\Desktop\Posta1\ConsuPyme MVC\bin\LeerDolar.pdb
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\ConsuPyme MVC.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\ConsuPyme MVC.pdb
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\EntityFramework.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\LeerDolar.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\Ninject.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\Ninject.Web.Common.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\Ninject.Web.Mvc.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\PagedList.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\PdfReportGenerator.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\System.Web.Helpers.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\System.Web.Mvc.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\System.Web.Providers.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\System.Web.Razor.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\System.Web.WebPages.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\System.Web.WebPages.Razor.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\WebActivator.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\WebGridMvc.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\itextsharp.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\LeerDolar.pdb
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\PdfReportGenerator.pdb
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\Ninject.pdb
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\Ninject.xml
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\Ninject.Web.Common.pdb
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\Ninject.Web.Common.xml
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\Ninject.Web.Mvc.pdb
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\Ninject.Web.Mvc.xml
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\PagedList.xml
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\EntityFramework.xml
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\es\Microsoft.Web.Infrastructure.resources.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\es\System.Web.Helpers.resources.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\es\System.Web.Razor.resources.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\es\System.Web.WebPages.resources.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\bin\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\obj\Debug\ConsuPyme MVC.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\obj\Debug\ConsuPyme MVC.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\ConsuPyme MVC\obj\Debug\ConsuPyme MVC.pdb

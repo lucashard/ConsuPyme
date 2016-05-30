@@ -30,7 +30,7 @@ namespace ConsuPyme_MVC.Controllers
             seleccion.productos.Visible = true;
             decimal total = Convert.ToDecimal(seleccion.Precio_Unitario * seleccion.Cantidad);
             ViewBag.Total = total > 0 ? "El total es:" + total.ToString("F") : string.Empty;
-            return Content(total.ToString());
+            return Content(total.ToString("F"));
             
         }
 
@@ -63,7 +63,7 @@ namespace ConsuPyme_MVC.Controllers
             decimal total = selectList.Sum(elemento => Decimal.Parse(elemento.precio.Replace(".", ","), NumberStyles.AllowDecimalPoint) * Convert.ToDecimal(elemento.cantidad));
             ViewBag.Total = total > 0 ? "El total es:  " + total.ToString("F") : string.Empty;
             
-            return Content(total.ToString());
+            return Content(total.ToString("F"));
         }
 
         public ActionResult Index()
@@ -121,6 +121,7 @@ namespace ConsuPyme_MVC.Controllers
                         elemento1.Visible = true;
                         elemento1.Precio_Unitario = Convert.ToDecimal(elemento.precio);
                         elemento1.Cantidad = Convert.ToInt32(elemento.cantidad);
+                        elemento1.Total = elemento1.Cantidad*elemento1.Precio_Unitario;
                     }
                 }
             }

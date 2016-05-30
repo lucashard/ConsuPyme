@@ -180,7 +180,7 @@
                 ),
             grid.Column("Total", format: item =>
             {
-                if (item.Total == 0)
+                if (item.Total==0 || item.Total==null)
                 {
                     return Html.Raw(string.Format("<input type=\"text\" id=\"total\"  name=\"cantidad\" value=\"\" />"));
                 }
