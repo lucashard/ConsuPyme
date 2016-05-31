@@ -23,15 +23,41 @@ namespace ConsuPyme_MVC.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            return View(_Deposito.Index());
+            ViewBag.productos = _Deposito.Index();
+            return View();
         }
 
         [HttpGet]
         public ActionResult Busqueda(string bus)
         {
-            //string bus = Request.Form["Busqueda"];
-            //ViewBag.Productos = _Deposito.
-            ViewBag.Productos = _Deposito.Despachos(bus);
+            var prod=_Deposito.Despachos(bus);
+            if (selectList.Any())
+            {
+                var id = Convert.ToInt32(selectList[0]);
+                if (prod.Where(x => x.Id == id).ToList().Any())
+                {
+                    prod.Single(x => x.Id == id).Visible = true;
+                }
+            }
+
+            ViewBag.Productos = prod;
+            return PartialView("Grilla");
+        }
+
+        [HttpGet]
+        public ActionResult Busqueda1(string bus)
+        {
+            var prod = _Deposito.Despachos(bus);
+            if (selectList.Any())
+            {
+                var id = Convert.ToInt32(selectList[0]);
+                if (prod.Where(x => x.Id == id).ToList().Any())
+                {
+                    prod.Single(x => x.Id == id).Visible = true;
+                }
+            }
+
+            ViewBag.Productos = prod;
             return PartialView("Grilla");
         }
 

@@ -4,7 +4,7 @@ namespace ConsuPyme_MVC.Models
 {
     public interface IDeposito
     {
-        Depositos Index();
+        List<Depositos> Index();
         void add(Depositos _deposito);
         Depositos Editar(int id);
         int update(Depositos o);

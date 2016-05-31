@@ -8,7 +8,7 @@ namespace ConsuPyme_MVC.Models
     {
         private readonly ConsuPymeEntities1 datos = new ConsuPymeEntities1();
 
-        public Depositos Index()
+        public List<Depositos> Index()
         {
             List<Deposito> acarreoDB = datos.Deposito.ToList();
             List<Depositos> lista_Acarreos =
@@ -21,23 +21,7 @@ namespace ConsuPyme_MVC.Models
                             Numero_Factura = o.Numero_Factura,
                             Id = o.Id
                         }).ToList();
-            var dictionary = new Dictionary<string, Depositos>();
-            foreach (Depositos element in lista_Acarreos)
-            {
-                if (!dictionary.ContainsKey(element.Nombre))
-                {
-                    dictionary[element.Nombre] = new Depositos
-                                                 {
-                                                     Id = element.Id,
-                                                     Importe = element.Importe,
-                                                     Nombre = element.Nombre,
-                                                     Numero_Factura = element.Numero_Factura,
-                                                     Producto_Id = element.Producto_Id
-                                                 };
-                }
-            }
-            var ac = new Depositos {lista_productos = dictionary};
-            return ac;
+            return lista_Acarreos;
         }
 
         public void add(Depositos _deposito)

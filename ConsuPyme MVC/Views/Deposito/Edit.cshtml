@@ -24,6 +24,23 @@
                 return this.optional(element) || /^-?(?:\d+|\d{1,3}(?:[\s\.,]\d{3})+)(?:[\.,]\d+)?$/.test(value);
             }
         });
+    
+        function actualizacion(datos) {
+            $("#GridData").html(datos);
+            $(".field-validation-error").hide();
+        }
+        function busqueda() {
+            var busqueda = $("#Busqueda").val();
+            $.ajax({
+                type: "GET",
+                url: "@Url.Action("Busqueda1", "Deposito")",
+                data: { bus: busqueda },
+                success: function(result) {
+                    actualizacion(result);
+                },
+                contentType: 'application/json'
+            });
+        }
     </script>
 </head>
 @using (Html.BeginForm())
@@ -62,16 +79,26 @@
         @Html.EditorFor(model => model.Numero_Factura)
         @Html.ValidationMessageFor(model => model.Numero_Factura)
     </div>
-      @Html.Label("Escoja los productos de la factura")
-       <div id="GridData">
-            @Html.Partial("Grilla")
-       </div>
+    <div>
+        Buscador de Despachos
+    </div>
+    <div>
+        @Html.TextBox("Busqueda")
+    </div>
+
+
+    <button value="Busqueda" class="btn" onclick=" busqueda();return false; " >Busqueda</button>
+      @Html.Label("Escoja el despacho")
+       
 
         <p>
             <input type="submit" value="Guardar" />
         </p>
     
 }
+<div id="GridData">
+            @Html.Partial("Grilla")
+       </div>
 
 <div>
     @Html.ActionLink("Volver", "Index")
