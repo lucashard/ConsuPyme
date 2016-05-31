@@ -127,3 +127,13 @@ C:\01 ARCHIVOS ESCRITORIO\Posta1\ExportExcel\bin\Debug\office.xml
 C:\01 ARCHIVOS ESCRITORIO\Posta1\ExportExcel\obj\x86\Debug\ExportExcel.csprojResolveAssemblyReference.cache
 C:\01 ARCHIVOS ESCRITORIO\Posta1\ExportExcel\obj\x86\Debug\ExportExcel.exe
 C:\01 ARCHIVOS ESCRITORIO\Posta1\ExportExcel\obj\x86\Debug\ExportExcel.pdb
+C:\Users\Lucas\Desktop\git\ConsuPyme\ExportExcel\bin\Debug\ExportExcel.exe
+C:\Users\Lucas\Desktop\git\ConsuPyme\ExportExcel\bin\Debug\ExportExcel.pdb
+C:\Users\Lucas\Desktop\git\ConsuPyme\ExportExcel\bin\Debug\Microsoft.Office.Interop.Excel.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\ExportExcel\bin\Debug\office.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\ExportExcel\bin\Debug\Microsoft.Vbe.Interop.dll
+C:\Users\Lucas\Desktop\git\ConsuPyme\ExportExcel\bin\Debug\Microsoft.Office.Interop.Excel.xml
+C:\Users\Lucas\Desktop\git\ConsuPyme\ExportExcel\bin\Debug\office.xml
+C:\Users\Lucas\Desktop\git\ConsuPyme\ExportExcel\obj\x86\Debug\ExportExcel.csprojResolveAssemblyReference.cache
+C:\Users\Lucas\Desktop\git\ConsuPyme\ExportExcel\obj\x86\Debug\ExportExcel.exe
+C:\Users\Lucas\Desktop\git\ConsuPyme\ExportExcel\obj\x86\Debug\ExportExcel.pdb

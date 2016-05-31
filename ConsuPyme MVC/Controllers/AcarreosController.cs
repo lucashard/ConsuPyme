@@ -60,11 +60,36 @@ namespace ConsuPyme_MVC.Controllers
             {
                 var acarreos = _Acarreos.Editar(Id);
                 var ac = _Acarreos.Buscar_Id_Productos(acarreos, _Acarreos.Despachos(null));
-                ViewBag.Productos = ac.Where(P=>P.Dc.Contains(bus)).ToList() ;
+                var prod=ac.Where(P=>P.Dc.Contains(bus)).ToList() ;
+                foreach (var elem in prod)
+                {
+                    elem.Visible = false;
+                }
+                    var id = Convert.ToInt32(acarreos.DespachoId);
+                    if (prod.Where(x => x.Id == id).ToList().Any() && !selectList.Any())
+                    {
+                        prod.Single(x => x.Id == id).Visible = true;
+                    }
+                    else if(selectList.Any())
+                    {
+                        id = Convert.ToInt32(selectList[0]);
+                        prod.Single(x => x.Id == id).Visible = true;
+                    }
+                
+                ViewBag.Productos = prod;
             }
             else
             {
-                ViewBag.Productos = _Acarreos.Despachos(bus);    
+                var prod = _Acarreos.Despachos(bus);
+                if (selectList.Any())
+                {
+                    var id = Convert.ToInt32(selectList[0]);
+                    if (prod.Where(x => x.Id == id).ToList().Any())
+                    {
+                        prod.Single(x => x.Id == id).Visible = true;
+                    }
+                }
+                ViewBag.Productos =prod ;    
             }
             
             return PartialView("Grilla");

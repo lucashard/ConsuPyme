@@ -140,8 +140,6 @@
         @Html.EditorFor(model => model.Importe)
         @Html.ValidationMessageFor(model => model.Importe)
     </div>
-
-    
      <div>
          Buscador de Despachos
      </div>
@@ -149,22 +147,26 @@
          @Html.TextBox("Busqueda")
      </div>
      <p>
-         <button value="Busqueda" id="Busqueda" class="btn" onclick="javascript:busqueda();">Busqueda</button>
+         <button value="Busqueda" id="Busqueda" class="btn" onclick="javascript:busqueda();return false;">Busqueda</button>
      </p>
  
-    @Html.Label("Escoja el Despacho")
+   
+
+    
+    
+
+   
+      <p>
+        <input type="submit" value="Crear" class="btn" />
+    </p>
+}
+ @Html.Label("Escoja el Despacho")
     @Html.ValidationMessage("Productos")
 
     <div id="GridData">
         @Html.Partial("Grilla")
     </div>
-
-    <p>
-        <input type="submit" value="Crear" class="btn" />
-    </p>
-
-}
-
+  
 <div >
     @Html.ActionLink("Volver", "Index")
 </div>
