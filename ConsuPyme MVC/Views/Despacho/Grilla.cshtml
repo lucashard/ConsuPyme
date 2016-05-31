@@ -4,24 +4,39 @@
   
      <script type="text/javascript">
 
-                 $("a").on('click', function (event) {
-                     debugger;
-                     event.preventDefault();
-                     var href = $(this).attr("href");
-                     var pagina1=href.indexOf("page=")+5;
-                     var pagina = href.substring(pagina1,href.length);
-                       $.ajax({
-                         type: "GET",
-                         url: "@Url.Action("Select", "Despacho")",
-                         async: false,
-                         data: {  page: pagina },
-                         success: function(result) {
-                             $("#GridData").html(result);
-                         }
-                     });
+//                 $("a").on('click', function (event) {
+//                     debugger;
+//                     event.preventDefault();
+//                     var href = $(this).attr("href");
+//                     var pagina1=href.indexOf("page=")+5;
+//                     var pagina = href.substring(pagina1,href.length);
+//                       $.ajax({
+//                         type: "GET",
+//                         url: "@Url.Action("Select", "Despacho")",
+//                         async: false,
+//                         data: {  page: pagina },
+//                         success: function(result) {
+//                             $("#GridData").html(result);
+//                         }
+//                     });
 
-                 });
-       
+//                 });
+         //       
+
+    $(function () {
+        $(':radio').change(function () {
+            debugger;
+            var id1 = $(this).val();
+            $.ajax({
+                url: '@Url.Action("Select")',
+                type: 'POST',
+                data: { isChecked: $(this).is(':checked'), id: id1 },
+                success: function (result) {
+                }
+            });
+        });
+    });
+
     </script>
 
 </head>

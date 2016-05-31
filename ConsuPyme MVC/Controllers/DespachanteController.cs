@@ -55,8 +55,16 @@ namespace ConsuPyme_MVC.Controllers
         [HttpGet]
         public ActionResult Busqueda(string bus)
         {
-            //string bus = Request.Form["Busqueda"];
-            ViewBag.Despachos = Despachante.Despachos1(bus);//.ObtenerGrilla(bus);
+            var desp = Despachante.Despachos1(bus);
+            if (selectList.Any())
+            {
+                var id = Convert.ToInt32(selectList[0]);
+                if (desp.Where(x => x.Id == id).ToList().Any())
+                {
+                    desp.Single(x => x.Id == id).Visible = true;
+                }
+            }
+            ViewBag.Despachos = desp;
             return PartialView("Grilla");
         }
 
@@ -93,6 +101,14 @@ namespace ConsuPyme_MVC.Controllers
              Despachantes despacho = Despachante.Editar(Id);
             var grilla=Despachante.MarcarGrilla(despacho, this.Despachante.Despachos1(null));
             var despresult = grilla.Where(elem => elem.Dc.Contains(bus)).ToList();
+            if (selectList.Any())
+            {
+                var id = Convert.ToInt32(selectList[0]);
+                if (despresult.Where(x => x.Id == id).ToList().Any())
+                {
+                    despresult.Single(x => x.Id == id).Visible = true;
+                }
+            }
             ViewBag.Despachos = despresult;
             return PartialView("Grilla");
         }

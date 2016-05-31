@@ -38,6 +38,22 @@
                 });
 
             });
+            debugger;
+            $(function () {
+                debugger;
+                $(':radio').change(function () {
+                    debugger;
+                    var id1 = $(this).val();
+                    $.ajax({
+                        url: '@Url.Action("Select")',
+                        type: 'POST',
+                        data: { isChecked: $(this).is(':checked'), id: id1 },
+                        success: function (result) {
+                        }
+                    });
+                });
+            });
+            debugger;
             $.validator.methods.range = function(value, element, param) {
                 var globalizedValue = value.replace(",", ".");
                 return this.optional(element) || (globalizedValue >= param[0] && globalizedValue <= param[1]);
@@ -46,20 +62,7 @@
             $.validator.methods.number = function(value, element) {
                 return this.optional(element) || /^-?(?:\d+|\d{1,3}(?:[\s\.,]\d{3})+)(?:[\.,]\d+)?$/.test(value);
             }
-            $(function() {
-                $(':radio').change(function() {
-
-                    debugger;
-                    var id1 = $(this).val();
-                    $.ajax({
-                        url: '@Url.Action("Select")',
-                        type: 'POST',
-                        data: { isChecked: $(this).is(':checked'), id: id1 },
-                        success: function(result) {
-                        }
-                    });
-                });
-            });
+            
         });
     </script>
  
