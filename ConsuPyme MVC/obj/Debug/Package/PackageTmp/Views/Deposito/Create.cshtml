@@ -11,11 +11,6 @@
 <script src="@Url.Content("~/Scripts/jquery-2.0.2.min.js")" type="text/javascript"> </script>
 <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"> </script>
 <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"> </script>
-    @*<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"> </script>
-    <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"> </script>
-    <link href="@Url.Content("~/Content/layout.css")" rel="stylesheet" type="text/css" />
-    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
-    <script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"> </script>*@
     <script src="@Url.Content("~/Scripts/DatePicker/jquery-ui.min.js")" type="text/javascript"> </script>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -77,7 +72,7 @@
 
         function actualizacion(datos) {
             $("#GridData").html(datos);
-            $(".field-validation-error").hide();
+           $(".field-validation-error").hide();
         }
 
         function busqueda() {
@@ -100,10 +95,7 @@
     <div class="editor-label">
         @Html.LabelFor(model => model.Nombre)
     </div>
-  @*  <div class="editor-field">
-        @Html.EditorFor(model => model.Nombre)
-        @Html.ValidationMessageFor(model => model.Nombre)
-    </div>*@
+  
      <div class="editor-label">
    
     @Html.DropDownListFor(m => m.ProveedorId, ViewBag.NombreProveedor as SelectList, "Seleccione El Nombre del deposito")
@@ -143,7 +135,7 @@
     </div>
 
 
-    <button value="Busqueda" class="btn" onclick=" busqueda(); " >Busqueda</button>
+    <button value="Busqueda" class="btn" onclick=" busqueda();return false; " >Busqueda</button>
     @Html.Label("Escoja el Despacho")
     @Html.ValidationMessage("Productos")
     <div id="GridData">

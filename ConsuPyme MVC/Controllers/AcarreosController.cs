@@ -73,7 +73,10 @@ namespace ConsuPyme_MVC.Controllers
                     else if(selectList.Any())
                     {
                         id = Convert.ToInt32(selectList[0]);
-                        prod.Single(x => x.Id == id).Visible = true;
+                        if (prod.Where(x => x.Id == id).ToList().Any())
+                        {
+                            prod.Single(x => x.Id == id).Visible = true;
+                        }
                     }
                 
                 ViewBag.Productos = prod;

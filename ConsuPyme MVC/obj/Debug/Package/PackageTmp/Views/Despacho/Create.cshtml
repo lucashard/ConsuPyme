@@ -76,6 +76,7 @@
 
 
         function actualizacion(datos) {
+            debugger;
             $("#GridData").html(datos);
             $(".field-validation-error").hide();
         }
@@ -201,7 +202,7 @@
         @Html.TextBox("Busqueda")
     </div>
     <p>
-        <button value="Busqueda" class="btn" onclick="busqueda();">Busqueda</button>
+        <button value="Busqueda" class="btn" onclick="busqueda();return false;">Busqueda</button>
     </p>
 
     @Html.Label("Escoja el Despacho")
